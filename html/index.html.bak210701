@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>U+ PASS</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" type="text/css" href="../css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/upluspass.css">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/slick.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.fullPage.js"></script>
+
+	<!-- 공유하기 상단 이미지 -->
+	<meta property="og:image" content="../images/common/open_graph_logo.png">
+
+	<!-- 아이폰 홈 화면 추가-->
+	<link rel="apple-touch-icon-precomposed" href="../images/common/mobile_ios_iphone_120.png">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="../images/common/mobile_ios_iphone_180.png">
+
+	<!-- 파비콘 -->
+	<link rel="shortcut icon" type="image/x-icon" href="../images/common/favicon.ico">
+</head>
+
+<body>
+<header>
+	<div class="inner">
+		<div class="logo"><h1>PASS BY U+</h1></div>
+		<div class="nav">
+			<ul class="gnb" id="menu">
+				<li data-menuanchor="page2"><a href="#page2">간편본인확인</a></li>
+				<li data-menuanchor="page3"><a href="#page3">PASS 인증서</a></li>
+				<li data-menuanchor="page4"><a href="#page4">모바일운전면허 확인서비스</a></li>
+				<!-- <li data-menuanchor="page5"><a href="#page5">휴대폰번호 로그인</a></li> -->
+				<li data-menuanchor="page6"><a href="#page6">QR출입증</a></li>
+			</ul>
+			<ul class="snb">
+				<li><a href="http://ocline.co.kr/aton/passbyU_new/app/html/magazine/magazine_card.html" target="_blank"><span>매거진</span></a></li>
+				<li><button type="button" class="open_partner"><span>제휴문의</span></button></li>
+			</ul>
+		</div>
+		<div class="btn_menu_toggle"><button type="button"><span>모바일 메뉴열기</span></button></div>
+	</div>
+</header>
+
+<div class="guide_fullpage">
+
+	<div class="section" id="section0">
+		<div class="main_bg">
+			<div class="bg_box">
+				<div class="main_img mainimg01"><img src="../images/index/img_phone_1.png" alt="이미지1"></div>
+				<div class="main_img mainimg02"><img src="../images/index/img_phone_2.png" alt="이미지2"></div>
+				<div class="main_img mainimg03"><img src="../images/index/img_phone_3.png" alt="이미지3"></div>
+				<div class="main_img mainimg04"><img src="../images/index/img_phone_4.png" alt="이미지4"></div>
+				<div class="main_img mainimg05"><img src="../images/index/img_phone_5.png" alt="이미지5"></div>
+				<div class="main_img mainimg06"><img src="../images/index/img_phone_6.png" alt="이미지6"></div>
+				<div class="main_img mainimg07"><img src="../images/index/img_phone_7.png" alt="이미지7"></div>
+				<div class="main_img mainimg08"><img src="../images/index/img_phone_8.png" alt="이미지8"></div>
+				<div class="main_img mainimg09"><img src="../images/index/img_phone_9.png" alt="이미지9"></div>
+			</div>
+		</div>
+		<div class="main_txt">
+			<p>금융, 쇼핑, 결제에 필요한 <i class="mobile"></i> 모든 인증은 <strong>빠르고 안전하게</strong></p>
+			<div class="logo"><img src="../images/index/logo_pass.png" alt="pass"></div>
+			<p>대한민국 국민 2명중 1명은<br />PASS 사용자!</p>
+			<div class="btn_pass"><button type="button"><span>PASS앱 바로가기</span></button></div>
+		</div>
+	</div><!-- // #section0 -->
+
+
+	<div class="section" id="section1">
+		<div class="con_group type1">
+			<div class="txtGroup">
+				<dl>
+					<dt><strong>3초만에 끝나는 <i class="mobile"></i> 간편본인확인</strong></dt>
+					<dd class="txt"><strong>아직도 복잡한 개인정보 입력하며, 문자 인증하시나요?</strong></dd>
+					<dd class="subtxt"><p>PASS앱에서 지문인식 한번이면 간편하게<br />본인확인 할 수 있어요.</p></dd>
+				</dl>
+			</div>
+			<div class="imgGroup">
+				<div class="biger">
+					<div class="page">
+						<div class="slide_slick">
+							<div class="img"><img src="../images/screen/screen_img_02_01.png" alt="이미지"></div>
+							<div class="img"><img src="../images/screen/screen_img_02_02.png" alt="이미지"></div>
+							<div class="img"><img src="../images/screen/screen_img_02_03.png" alt="이미지"></div>
+							<div class="img"><img src="../images/screen/screen_img_02_04.png" alt="이미지"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- // #section1 -->
+
+
+	<div class="section" id="section2">
+		<div class="con_group type1">
+			<div class="txtGroup">
+				<dl>
+					<dt><strong>5,000만 이통사 고객이<br />사용하는 PASS인증서</strong></dt>
+					<dd class="txt"><strong>휴대폰 번호만 있으면 인증서 사용이 쉬워집니다.</strong></dd>
+					<dd class="subtxt">
+						<div><strong>3초</strong><span>안에 인증서 발급 끝!</span></div>
+						<div><strong>3년간</strong><span>휴대폰 내 가장 안전한 곳에 인증서 보관가능!</span></div>
+						<div><strong>3초</strong><span>만에 실시간 인증하여 사용 가능!</span></div>
+					</dd>
+					<!-- <dd class="btn"><button type="button"></button><span>서비스체험</span></button></dd> -->
+					<dd class="btn"><a href="https://www.passauth.co.kr" target="_blank"><span>서비스체험</span></a></dd>
+				</dl>
+			</div>
+			<div class="imgGroup">
+				<div class="biger">
+					<div class="page">
+						<div class="slide_slick">
+							<div class="img"><img src="../images/screen/screen_img_03_01.png" alt="이미지"></div>
+							<div class="img"><img src="../images/screen/screen_img_03_02.png" alt="이미지"></div>
+							<div class="img"><img src="../images/screen/screen_img_03_03.png" alt="이미지"></div>
+							<div class="img"><img src="../images/screen/screen_img_03_04.png" alt="이미지"></div>
+							<div class="img"><img src="../images/screen/screen_img_03_05.png" alt="이미지"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- // #section2 -->
+
+
+	<div class="section" id="section3">
+
+		<div class="con_group type2">
+			<div class="txtGroup">
+				<dl>
+					<dt><strong>운전면허증이<br />내 휴대폰 속으로!</strong></dt>
+					<dd class="subtxt"><p>ICT규제샌드박스를 통해 법적효력을 인정받은<br />
+						PASS모바일운전면허 확인서비스는 온/오프라인에서<br />
+						운전자격,성인여부,신원확인 시 안전하고, 편리하게<br />
+						인증할 수 있어요.</p></dd>
+				</dl>
+			</div>
+			<div class="imgGroup">
+				<div class="biger">
+					<div class="page">
+						<div class="slide_slick">
+							<div class="img"><img src="../images/screen/screen_img_04_01.png" alt="이미지"></div>
+							<div class="img"><img src="../images/screen/screen_img_04_02.png" alt="이미지"></div>
+							<div class="img"><img src="../images/screen/screen_img_04_03.png" alt="이미지"></div>
+							<div class="img"><img src="../images/screen/screen_img_04_04.png" alt="이미지"></div>
+							<div class="img"><img src="../images/screen/screen_img_04_05.png" alt="이미지"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div><!-- // #section3 -->
+
+
+	
+	<div class="section" id="section5">
+
+		<div class="con_group type1">
+			<div class="txtGroup">
+				<dl>
+					<dt><strong>다중이용시설 이용 시,<br />간편한 QR출입증</strong></dt>
+					<dd class="subtxt"><p>집단감염 위험이 높은 시설 출입 시,<br />
+						수기로 작성해 오던 명단을<br />
+						핸드폰 QR코드 스캔으로 간편하게  PASS하세요.</p></dd>
+				</dl>
+			</div>
+			<div class="imgGroup">
+				<div class="biger">
+					<div class="page">
+						<div class="slide_slick">
+							<div class="img"><img src="../images/screen/screen_img_06_01.png" alt="이미지"></div>
+							<div class="img"><img src="../images/screen/screen_img_06_02.png" alt="이미지"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div><!-- // #section5 -->
+
+
+	<div class="section" id="section6">
+		<div class="footer_wrap">
+			<div class="footer_info">
+				<dl>
+					<dt>서비스를 이용하시려면<br /><span><img src="../images/index/ico_logo_pass_dark.svg" alt="PASS BY U+"></span> 앱을 설치하세요.</dt>
+					<!-- <dd>통신사유통 단말기에는 기본으로 설치되어 있습니다.<br />설치된 앱을 확인해주세요.</dd> -->
+				</dl>
+				<div>
+					<button type="button"><img src="../images/index/btn_store_g.png" alt="Gooogle Play"></button>
+					<button type="button"><img src="../images/index/btn_store_a.png" alt="App Store"></button>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="inner">
+					<div class="private">
+						<a href="#test1">서비스 이용약관</a>
+						<a href="#test2">개인정보처리방침</a>
+					</div>
+					<div class="co_name">(주)엘지유플러스</div>
+					<div class="info">
+						<ul>
+							<li>서울특별시 용산구 한강대로52</li>
+							<li>대표이사 : 하현회</li>
+							<li>사업자등록번호 220-81-39938</li>
+							<li>고객센터 휴대폰114(무료), 1544-0010(유료)</li>
+						</ul>
+					</div>
+					
+					<div class="share">
+						<div class="logo"><img src="../images/index/ico_logo_uplus.png" alt="lg u plus"></div>
+						<div class="sns">
+							<ul>
+								<li><button class="ico_sns"><span><img src="../images/index/ico_facebook.png" alt="페이스북"></span></button></li>
+								<li><button class="ico_sns"><span><img src="../images/index/ico_youtube.png" alt="트위터"></span></button></li>
+								<li><button class="ico_sns"><span><img src="../images/index/ico_twiter.png" alt="트위터"></span></button></li>
+								<li><button class="ico_sns"><span><img src="../images/index/ico_blog.png" alt="블로그"></span></button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div><!-- // footer_wrap -->
+		
+	</div><!-- // #section6 -->
+
+</div><!-- // guide_fullpage -->
+
+
+
+<div class="dim"></div>
+<div class="layer partner">
+	<div class="group">
+		<p class="tit"><span>간편본인확인 이용문의</span></p>
+		<ul>
+			<li><a href="http://www.niceinfo.co.kr/main.nice" target="_blank" class="niceinfo"><span>NICE 평가정보</span></a></li>
+			<li><a href="https://www.sci.co.kr/cio/index.do" target="_blank" class="sci"><span>SCI 평가정보</span></a></li>
+			<li><a href="https://www.kcp.co.kr/main.do" target="_blank" class="kcp"><span>NHN 한국사이버 결제</span></a></li>
+			<li><a href="https://www.dreamsecurity.com/" target="_blank" class="dreamsecurity"><span>드림 시큐리티</span></a></li>
+			<li><a href="http://www.koreacb.com/" target="_blank" class="koreacb"><span>코리아 크레딧 뷰로</span></a></li>
+			<li><a href="https://www.mobilians.co.kr/" target="_blank" class="mobilians"><span>KG 모빌리언스</span></a></li>
+			<li><a href="https://www.kmcert.com/" target="_blank" class="kmcert"><span>한국 모바일 인증</span></a></li>
+			<li><a href="https://www.danalpay.com/main/main.aspx" target="_blank" class="danalpay"><span>다날</span></a></li>
+		</ul>
+	</div>
+	<div class="group">
+		<p class="tit"><span>PASS인증서 제휴 문의</span></p>
+		<ul>
+			<li><a href="https://www.passauth.co.kr/alliance" target="_blank" class="passauth"><span>패스인증서</span></a></li>
+		</ul>
+	</div>
+	<div class="group">
+		<p class="tit"><span>모바일운전면허 확인서비스 이용문의</span></p>
+		<ul>
+			<li><a href="http://www.niceinfo.co.kr/main.nice" target="_blank" class="niceinfo"><span>NICE 평가정보</span></a></li>
+		</ul>
+	</div>
+	
+	<div class="close"><button type="close"><span>닫기</span></button></div>
+</div>
+
+
+<div class="layer event">
+	<div class="event_slide">
+		<div class="item"><a href="#g"><img src="../images/banner/event_img.png" alt=""></a></div>
+		<div class="item"><img src="../images/banner/event_img.png" alt=""></div>
+		<div class="item"><img src="../images/banner/event_img.png" alt=""></div>
+	</div>
+	<div class="today">
+		<label><input type="checkbox" class="chk_today"><span class="checkmark"></span><span class="txt">하루 보지않기</span></label>
+		<div class="close"><button type="button"><span>닫기</span></button></div>
+	</div>
+</div>
+
+
+<div class="aside">
+	<!-- <div class="btn-close"><button type="button"><span>메뉴닫기</span></button></div> -->
+	<ul>
+		<li><a href="#section1">간편본인확인</a></li>
+		<li><a href="#section2">PASS 인증서</a></li>
+		<li><a href="#section3">모바일운전면허 확인서비스</a></li>
+		<li><a href="#section5">QR출입증</a></li>
+	</ul>
+	<div>
+		<span class="btn"><a href="http://ocline.co.kr/aton/passbyU_new/app/html/magazine/magazine_card.html" target="_blank"><span>매거진</span></a></span>
+		<span class="btn"><button type="button" class="open_partner"><span>제휴문의</span></button></span>
+	</div>
+</div>
+
+
+
+<!-- 서비스 이용약관 -->
+<div class="layer full" id="test1" style="display:none;">
+	<div class="layer_inner">
+		<header><h1>서비스 이용약관</h1></header>
+		<div class="layer_content">
+			<pre>
+				<strong>제1조(목적)</strong>
+				본 약관은 “PASS스탁" (이하 "서비스")을 제공하는 "주식회사 아톤"(이하 "회사")과 가입자(이하 "가입자")의 이용에 있어 "가입자"와 "회사" 간의 권리, 의무 및 책임 사항, "서비스" 이용 조건 및 절차 등 기본적인 사항을 규정함을 목적으로 합니다.
+				 
+				<strong>제2조(용어의 정의)</strong>
+				① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+				1. “이용계약”이라 함은 서비스 이용을 위해 회사와 가입자 사이에 체결하는 계약을 말합니다.
+				2. “이용요금”이라 함은 이용계약에 따라 가입자가 회사에게 지급하여야 할 금원을 말합니다.
+
+				<strong>제1조(목적)</strong>
+				본 약관은 “PASS스탁" (이하 "서비스")을 제공하는 "주식회사 아톤"(이하 "회사")과 가입자(이하 "가입자")의 이용에 있어 "가입자"와 "회사" 간의 권리, 의무 및 책임 사항, "서비스" 이용 조건 및 절차 등 기본적인 사항을 규정함을 목적으로 합니다.
+				 
+				<strong>제2조(용어의 정의)</strong>
+				① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+				1. “이용계약”이라 함은 서비스 이용을 위해 회사와 가입자 사이에 체결하는 계약을 말합니다.
+				2. “이용요금”이라 함은 이용계약에 따라 가입자가 회사에게 지급하여야 할 금원을 말합니다.
+
+				<strong>제1조(목적)</strong>
+				본 약관은 “PASS스탁" (이하 "서비스")을 제공하는 "주식회사 아톤"(이하 "회사")과 가입자(이하 "가입자")의 이용에 있어 "가입자"와 "회사" 간의 권리, 의무 및 책임 사항, "서비스" 이용 조건 및 절차 등 기본적인 사항을 규정함을 목적으로 합니다.
+				 
+				<strong>제2조(용어의 정의)</strong>
+				① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+				1. “이용계약”이라 함은 서비스 이용을 위해 회사와 가입자 사이에 체결하는 계약을 말합니다.
+				2. “이용요금”이라 함은 이용계약에 따라 가입자가 회사에게 지급하여야 할 금원을 말합니다.
+
+				<strong>제1조(목적)</strong>
+				본 약관은 “PASS스탁" (이하 "서비스")을 제공하는 "주식회사 아톤"(이하 "회사")과 가입자(이하 "가입자")의 이용에 있어 "가입자"와 "회사" 간의 권리, 의무 및 책임 사항, "서비스" 이용 조건 및 절차 등 기본적인 사항을 규정함을 목적으로 합니다.
+				 
+				<strong>제2조(용어의 정의)</strong>
+				① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+				1. “이용계약”이라 함은 서비스 이용을 위해 회사와 가입자 사이에 체결하는 계약을 말합니다.
+				2. “이용요금”이라 함은 이용계약에 따라 가입자가 회사에게 지급하여야 할 금원을 말합니다.
+			</pre>
+		</div>
+		<div class="close"><button type="button"><span>닫기</span></button></div>
+	</div>
+</div>
+
+
+
+
+<!-- 개인정보처리방침 -->
+<div class="layer full" id="test2" style="display:none">
+	<div class="layer_inner">
+		<header><h1>개인정보처리방침</h1></header>
+		<div class="layer_content">
+			<pre>
+				<strong>제1조(목적)</strong>
+				본 약관은 “PASS스탁" (이하 "서비스")을 제공하는 "주식회사 아톤"(이하 "회사")과 가입자(이하 "가입자")의 이용에 있어 "가입자"와 "회사" 간의 권리, 의무 및 책임 사항, "서비스" 이용 조건 및 절차 등 기본적인 사항을 규정함을 목적으로 합니다.
+				 
+				<strong>제2조(용어의 정의)</strong>
+				① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+				1. “이용계약”이라 함은 서비스 이용을 위해 회사와 가입자 사이에 체결하는 계약을 말합니다.
+				2. “이용요금”이라 함은 이용계약에 따라 가입자가 회사에게 지급하여야 할 금원을 말합니다.
+
+				<strong>제1조(목적)</strong>
+				본 약관은 “PASS스탁" (이하 "서비스")을 제공하는 "주식회사 아톤"(이하 "회사")과 가입자(이하 "가입자")의 이용에 있어 "가입자"와 "회사" 간의 권리, 의무 및 책임 사항, "서비스" 이용 조건 및 절차 등 기본적인 사항을 규정함을 목적으로 합니다.
+				 
+				<strong>제2조(용어의 정의)</strong>
+				① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+				1. “이용계약”이라 함은 서비스 이용을 위해 회사와 가입자 사이에 체결하는 계약을 말합니다.
+				2. “이용요금”이라 함은 이용계약에 따라 가입자가 회사에게 지급하여야 할 금원을 말합니다.
+
+				<strong>제1조(목적)</strong>
+				본 약관은 “PASS스탁" (이하 "서비스")을 제공하는 "주식회사 아톤"(이하 "회사")과 가입자(이하 "가입자")의 이용에 있어 "가입자"와 "회사" 간의 권리, 의무 및 책임 사항, "서비스" 이용 조건 및 절차 등 기본적인 사항을 규정함을 목적으로 합니다.
+				 
+				<strong>제2조(용어의 정의)</strong>
+				① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+				1. “이용계약”이라 함은 서비스 이용을 위해 회사와 가입자 사이에 체결하는 계약을 말합니다.
+				2. “이용요금”이라 함은 이용계약에 따라 가입자가 회사에게 지급하여야 할 금원을 말합니다.
+
+				<strong>제1조(목적)</strong>
+				본 약관은 “PASS스탁" (이하 "서비스")을 제공하는 "주식회사 아톤"(이하 "회사")과 가입자(이하 "가입자")의 이용에 있어 "가입자"와 "회사" 간의 권리, 의무 및 책임 사항, "서비스" 이용 조건 및 절차 등 기본적인 사항을 규정함을 목적으로 합니다.
+				 
+				<strong>제2조(용어의 정의)</strong>
+				① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+				1. “이용계약”이라 함은 서비스 이용을 위해 회사와 가입자 사이에 체결하는 계약을 말합니다.
+				2. “이용요금”이라 함은 이용계약에 따라 가입자가 회사에게 지급하여야 할 금원을 말합니다.
+			</pre>
+		</div>
+		<div class="close"><button type="button"><span>닫기</span></button></div>
+	</div>
+</div>
+
+
+
+<script type="text/javascript" src="../js/temp.js"></script>
+
+
+
+</body>
+</html>

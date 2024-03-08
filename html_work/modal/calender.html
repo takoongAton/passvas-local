@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>stock_new_2021</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<meta name="description" content="설명설명설명">
+
+	<meta property="og:type" content="website"> 
+	<meta property="og:title" content="타이틀타이틀">
+	<meta property="og:description" content="설명설명설명">
+	<meta property="og:image" content="../../images/common/stock_meta.png">
+	<meta property="og:url" content="https://www.www.www.www/">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="타이틀타이틀">
+	<meta name="twitter:description" content="설명설명설명">
+	<meta name="twitter:image" content="../../images/common/logo_stock.png">
+	<meta name="twitter:domain" content="https://www.www.www.www/">
+
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/stock_new.css">
+	<link rel="stylesheet" href="../../css/test.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico">
+<style>
+div.layer {display:none;}
+div.layer_dim {position:fixed; top:0; right:0; bottom:0; left:0; height:100vh; background-color:rgba(0,0,0,0.5);}
+
+
+
+/* 모달팝업 */
+div.layer.modal .layer_inner {position:fixed; top:50%; left:20px; right:20px; /* max-height:40vh; */ transform:translateY(-50%); background-color:#fff; border-radius:0.5em; box-shadow:0 1px 10px rgba(0,0,0,0.5); overflow-y:auto; 
+	animation-name:ani_modal; animation-duration:0.2s; animation-iteration-count:1;
+	transform:translateY(-50%);
+}
+@keyframes ani_modal {
+	0% {transform:translateY(-50%) scale(0.8); opacity:0;}
+	100% {transform:translateY(-50%) scale(1); opacity:1;}
+}
+
+div.layer.modal dl {padding:2.75em 1em 0; color:#111; text-align:center;}
+div.layer.modal dl dt {margin-bottom:0.5em; font-weight:bold; line-height:1.25em;}
+div.layer.modal dl dd {font-size:0.9375em; line-height:1.46666em;}
+div.modal_btn {display:flex; justify-content:space-between; align-items:center;; position:-webkit-sticky; position:sticky; left:0; bottom:0; width:100%; margin-top:2em; padding:0 12px;}
+div.modal_btn div {width:100%; padding:0 4px 16px;}
+div.modal_btn div button {width:100%; border-radius:0.375em; line-height:3em; font-weight:bold;}
+div.modal_btn div button.next {background-color:#ff6600; color:#fff;}
+div.modal_btn div button.close {background-color:#eee; color:#aaa;}
+
+
+
+/*
+.layer .calender {padding-top:28px;}
+.layer .calender div.month {display:flex; align-items:center; justify-content:center;}
+.layer .calender div.month button {width:32px; height:32px; background-image:url('../../images/temp/icon_date.png'); background-repeat:no-repeat; background-size:64px 64px; font-size:0;}
+.layer .calender div.month button.prev {background-position:0 -32px;}
+.layer .calender div.month button.next {background-position:-32px -32px;}
+.layer .calender div.month button:disabled.prev {background-position:0 0;}
+.layer .calender div.month button:disabled.next {background-position:-32px 0;}
+
+.layer .calender div.month strong {display:block; font-size:1.0625em; line-height:1;}
+.layer .calender div.month span {display:block; margin-top:0.33333em; color:#aaa; font-size:0.75em;}
+
+.layer .calender div.month div.tit {text-align:center;}
+.layer .calender ul {max-width:100%; margin:0 auto; padding:0 1.5em;
+	display:grid;
+	grid-column-gap:0px;
+	grid-row-gap:3px;
+	grid-template-columns:auto auto auto auto auto auto auto;
+}
+.layer .calender ul.week {position:relative;}
+.layer .calender ul li {width:31px; height:31px; margin:0 auto; justify-content:center; align-items:center; text-align:center; line-height:31px}
+.layer .calender ul li span {display:block; width:100%; height:100%; border-radius:100%; font-size:15px; line-height:31px; text-align:center; transition:background-color 0.05s, color 0.05s;}
+.layer .calender ul li.active {}
+.layer .calender ul li.active span {background-color:#ff6600; color:#fff;}
+.layer .calender ul.day li:nth-child(7n),
+.layer .calender ul.day li:nth-child(7n + 1) {color:rgba(17,17,17,0.2)}
+.layer .calender ul.week li {font-weight:bold;}
+*/
+</style>
+</head>
+<body>
+
+
+<div class="layer modal" style="display:block;">
+	<div class="layer_dim"></div>
+	<div class="layer_inner">
+		
+		<div class="calender">
+			<!-- <div class="month">
+				<button class="prev"><span>이전</span></button>
+				<div class="tit">
+					<strong>2021년 1월 1주</strong>
+					<span>2021.01.01 ~ 2021.01.14</span>
+				</div>
+				<button class="next" disabled><span>다음</span></button>
+			</div> -->
+
+			<div class="date-picker">
+				<button class="prev"><span>이전</span></button>
+				<div class="tit">
+					<strong>2021년 1월 1주</strong>
+				</div>
+				<button class="next" disabled><span>다음</span></button>
+				<!-- <button class="btn_picker"><span>달력보기</span></button> -->
+			</div>
+
+			<ul class="week">
+				<li>일</li>
+				<li>월</li>
+				<li>화</li>
+				<li>수</li>
+				<li>목</li>
+				<li>금</li>
+				<li>토</li>
+			</ul>
+			<ul class="day">
+				<li><span>29</span></li>
+				<li><span>30</span></li>
+				<li><span>1</span></li>
+				<li><span>2</span></li>
+				<li><span>3</span></li>
+				<li><span>4</span></li>
+				<li><span>5</span></li>
+				<li><span>6</span></li>
+				<li><span>7</span></li>
+				<li><span>8</span></li>
+				<li><span>9</span></li>
+				<li><span>10</span></li>
+				<li><span>11</span></li>
+				<li><span>12</span></li>
+				<li><span>13</span></li>
+				<li><span>14</span></li>
+				<li><span>15</span></li>
+				<li><span>16</span></li>
+				<li><span>17</span></li>
+				<li><span>18</span></li>
+				<li><span>19</span></li>
+				<li><span>29</span></li>
+				<li><span>21</span></li>
+				<li><span>22</span></li>
+				<li><span>23</span></li>
+				<li><span>24</span></li>
+				<li><span>25</span></li>
+				<li><span>26</span></li>
+				<li><span>27</span></li>
+				<li><span>28</span></li>
+				<li><span>29</span></li>
+				<li><span>30</span></li>
+				<li><span>31</span></li>
+				<li><span>1</span></li>
+				<li><span>2</span></li>
+			</ul>
+		</div>
+
+		<div class="modal_btn">
+			<div><button type="button" class="close"><span>취소</span></button></div>
+			<div><button type="button" class="next"><span>확인</span></button></div>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../js/jquery-1.12.4.min.js"></script> -->
+
+<script src="../../js/temp.js"></script>
+<script>
+
+$(function(){
+
+	/* 딤 클릭시 팝업 닫기 */
+	$(".layer .layer_dim").on("click", function(){
+		$(this).parents('.layer').hide();
+	})
+
+	$("li").on("click", function(){
+		$(this).siblings().removeClass("active");
+		$(this).addClass("active");
+	})
+
+
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>stock_new_2021</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<meta name="description" content="설명설명설명">
+
+	<meta property="og:type" content="website"> 
+	<meta property="og:title" content="타이틀타이틀">
+	<meta property="og:description" content="설명설명설명">
+	<meta property="og:image" content="../../images/common/stock_meta.png">
+	<meta property="og:url" content="https://www.www.www.www/">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="타이틀타이틀">
+	<meta name="twitter:description" content="설명설명설명">
+	<meta name="twitter:image" content="../../images/common/logo_stock.png">
+	<meta name="twitter:domain" content="https://www.www.www.www/">
+
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/stock_new.css">
+	<link rel="stylesheet" href="../../css/slick.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico">
+
+<style>
+* {box-sizing:border-box; margin:0; padding:0; list-style:none;}
+body {width:100%;}
+
+
+
+
+.btn_test button {padding:0.75em 1em; background-color:#000; color:#fff; border:0 none;}
+
+
+.layer .close button {border:0 none;}
+
+
+
+
+.conGroup-content {
+	display:grid;
+	grid-column-gap:10px;
+	grid-row-gap:10px;
+	grid-template-columns:auto auto;
+	padding:10px;
+}
+.conGroup-content > div {}
+.conGroup-content img {max-width:100%;}
+
+
+.sfo01_02 {padding-left:1em;}
+.sfo01_02::after {content:""; display:block; height:0; clear:both; }
+.sfo01_02 li {display:inline-block; float:left; margin:0 5px 5px 0;}
+.sfo01_02 li a {display:block; padding:0.5em 1em; background-color:#e5e5e5; border-radius:4px; text-decoration:none; color:#666; font-size:0.875em; font-weight:bold;}
+
+
+.roboAI {}
+.roboAI .scroll {padding:0 1.0625em;}
+.roboAI_item {position:relative; width:200px;}
+.roboAI_item + .roboAI_item {margin-left:20px;}
+.roboAI_item dl:first-of-type {}
+.roboAI_item dl:last-of-type {display:flex; justify-content:space-between;}
+.roboAI_item dl:last-of-type dd {position:absolute; top:50%; right:0; transform:translateY(-50%);}
+
+
+/* 메인 공지사항 */
+.main_notice {}
+.main_notice dl {display:flex; max-width:100%; justify-content:start; align-items:center;}
+.main_notice dl dt {min-width:20%;}
+.main_notice dl dd {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+
+
+
+
+
+/* 모달팝업 */
+div.layer.modal {}
+div.layer.modal .layer_inner {position:fixed; top:50%; left:20px; right:20px; max-height:40vh; transform:translateY(-50%); background-color:#fff; border-radius:0.5em; box-shadow:0 1px 10px rgba(0,0,0,0.5); overflow-y:auto; 
+	animation-name:ani_modal; animation-duration:0.2s; animation-iteration-count:1;
+	transform:translateY(-50%);
+}
+div.layer.modal header {display:flex; align-items:center; justify-content:center; position:-webkit-sticky; position:sticky; top:0; width:100%; background-color:#fff; text-align:center; height:40px;}
+div.layer.modal header h1 {font-size:18px; font-weight:normal;}
+@keyframes ani_modal {
+	0% {transform:translateY(-50%) scale(0.8); opacity:0;}
+	100% {transform:translateY(-50%) scale(1); opacity:1;}
+}
+
+
+div.layer.modal dl {padding:2.75em 1em 0; color:#111; text-align:center;}
+div.layer.modal dl dt {margin-bottom:0.5em; font-weight:bold; line-height:1.25em;}
+div.layer.modal dl dd {font-size:0.9375em; line-height:1.46666em;}
+div.modal_btn {display:flex; justify-content:space-between; align-items:center;; position:-webkit-sticky; position:sticky; left:0; bottom:0; width:100%; margin-top:2em; padding:0 12px;}
+div.modal_btn div {width:100%; padding:0 4px 16px;}
+div.modal_btn div button {width:100%; border-radius:0.375em; line-height:3em; font-weight:bold;}
+div.modal_btn div button.next {background-color:#ff6600; color:#fff;}
+div.modal_btn div button.close {background-color:#eee; color:#aaa;}
+
+
+
+
+
+
+
+/* div.layer .close {position:absolute; top:0; right:0; width:60px; height:60px; color:#fff; font-size:0; transition:all 0.1s ease;}
+div.layer .close:hover {background-color:rgba(0,0,0,0.6);}
+div.layer .close::before,
+div.layer .close::after {content:""; position:absolute; top:50%; left:50%; width:60%; height:2px; background-color:#fff; transform:translate(-50%,-50%);}
+div.layer .close::before {transform:translate(-50%,-50%) rotate(45deg);}
+div.layer .close::after {transform:translate(-50%,-50%) rotate(-45deg);} */
+
+
+/* 이벤트 레이어 */
+.ev_layer {/*display:none;*/ position:fixed; top:0; left:0; width:100%; font-size:16px; z-index:1;}
+
+.ev_layer .triger {position:fixed; width:60px; height:60px; z-index:1; border:1px solid #fff000; border-radius:100%; box-shadow:0 3px 6px rgba(0,0,0,0.16);}
+.ev_layer.leftTop .triger {top:20px; left:20px;}
+.ev_layer.rightTop .triger {top:20px; right:20px;}
+.ev_layer.leftBottom .triger {bottom:20px; left:20px;}
+.ev_layer.rightBottom .triger {bottom:20px; right:20px;}
+
+.ev_layer .content {position:fixed; width:80%; margin:0 20px; background-color:#fff; border-radius:10px; box-shadow:0 0 5px rgba(0,0,0,0.5); overflow:hidden; z-index:1;}
+.ev_layer.leftTop .content,
+.ev_layer.leftBottom .content {left:0;}
+.ev_layer.rightTop .content,
+.ev_layer.rightBottom .content {right:0;}
+.ev_layer .content.bounceInUp {animation:bounceInUp 0.3s 1}
+.ev_layer .content.bounceInDown {animation:bounceInDown 0.3s 1}
+
+@keyframes bounceInUp {
+	0% {opacity:0; transform:translate(0px, 30px)}
+	50% {opacity:0.8; transform:translate(0px, -10px)}
+	100% {opacity:1; transform:translate(0px, 0px)}
+}
+
+@keyframes bounceInDown {
+	0% {opacity:0; transform:translate(0px, -30px)}
+	50% {opacity:0.8; transform:translate(0px, 10px)}
+	100% {opacity:1; transform:translate(0px, 0px)}
+}
+
+.floating {animation-name:floating; animation-timing-function: ease; animation-duration: 1s; animation-iteration-count:infinite;}
+@-webkit-keyframes floating {50% {transform:translateY(-4px);}}
+
+.ev_layer .content div.img img {width:100%;}
+.ev_layer .content div.con {padding:1.25em;}
+.ev_layer .content div.con .inwrap li {display:flex; margin-bottom:0.25em; font-size:0.875em; line-height:1.1}
+.ev_layer .content div.con .inwrap li + li {}
+.ev_layer .content div.con .inwrap span.tit {margin-right:0.5em; color:#333;}
+.ev_layer .content div.con .inwrap span.txt {color:#666;}
+
+.ev_layer .content .evBtn {display:block; text-align:center;}
+.ev_layer .content .evBtn button,
+.ev_layer .content .evBtn a {display:block; width:100%; height:3em; margin:0 auto; background-color:#222; border:0 none; border-radius:100px; color:#fff; font-size:1em; font-weight:500; letter-spacing:0;text-decoration:none;}
+
+.ev_layer .content div.close {position:absolute; top:0.5em; right:0.5em; width:26px; height:26px; background-color:#ff6600; border-radius:100%; text-indent:-1000px}
+.ev_layer .content div.close::before, 
+.ev_layer .content div.close::after {content:""; position:absolute; top:50%; left:50%; width:70%; height:2px; background-color:#fff;}
+.ev_layer .content div.close::before {transform:translate(-50%,-50%) rotate(45deg)}
+.ev_layer .content div.close::after {transform:translate(-50%,-50%) rotate(-45deg)}
+
+.ev_layer .content .today {position:relative; padding:10px; background-color: #f1f1f1; line-height:1;}
+
+.ev_layer .ev_chk {display:block; position:relative; padding-left:1.25em; cursor:pointer; line-height:1; letter-spacing:0; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;}
+.ev_layer .ev_chk .txt {color:#666; font-size:0.875em;}
+.ev_layer .ev_chk input {position:absolute; opacity:0; cursor:pointer; height:0; width:0;}
+.ev_layer .ev_chk .checkmark {display:flex; justify-content:center; align-items:center; position:absolute; top:0; left:0; height:1em; width:1em; background-color:#dddddd; border:1px solid #bbbbbb;}
+.ev_layer .ev_chk input:checked ~ .checkmark {background-color: #fff;}
+.ev_layer .ev_chk .checkmark:after {content:""; display:none; width:40%; height:70%; margin-top:-30%; border:solid #666666; border-width:0 2px 2px 0; -webkit-transform: rotate(45deg); -ms-transform:rotate(45deg); transform:rotate(45deg) translateX(0) translateY(0);}
+.ev_layer .ev_chk input:checked ~ .checkmark:after {display: inline-block;}
+
+@media screen and (max-width:320px) {
+	.ev_layer {font-size:14px;}
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+
+	<header class="header">
+		<h1>스탁</h1>
+		<div class="util-btn back"><button type="button"><span>이11전</span></button></div>
+		<div class="util-btn close"><button type="button"><span>닫기</span></button></div>
+		<ul class="gnb">
+			<li class="active"><a href="#g">홈</a></li>
+			<li><a href="#g">투자전략</a></li>
+			<li><a href="#g">추천종목</a></li>
+			<li><a href="#g">종목랭킹</a></li>
+			<li><a href="#g">계좌</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+	1111<br />
+
+		<div>
+			<div class="bnr_list">
+				<div class="item"><img src="https://via.placeholder.com/339x120" alt="image"></div>
+				<div class="item"><img src="https://via.placeholder.com/339x120" alt="image"></div>
+				<div class="item"><img src="https://via.placeholder.com/339x120" alt="image"></div>
+				<div class="item"><img src="https://via.placeholder.com/339x120" alt="image"></div>
+			</div>
+		</div>
+
+		<div class="conGroup-name">
+
+
+<style>
+.stockViewTitle {display:flex; justify-content:space-between; align-items:center;}
+.stockViewTitle > span {}
+.stockViewTitle > span.week1 {}
+
+.stockViewTitle > span:first-of-type {align-self:center; width:3.2em; margin:0 12px 0 4px; background-color:#222; color:#fff; border-radius:100em; font-size:0.625em; line-height:2em; overflow:hidden; text-align:center;;}
+.stockViewTitle > span:first-of-type.week1 {background-color:#FFECD6; color:#FF7926;}
+.stockViewTitle > span:first-of-type.week2 {background-color:#D4F2E6; color:#08B46E;}
+.stockViewTitle > span:first-of-type.week3 {background-color:#DBF1FF; color:#328CF5;}
+.stockViewTitle > span:first-of-type.week4 {background-color:#ECE5FF; color:#793FFA;}
+
+.stockViewTitle > div:first-of-type {display:flex; flex:1;}
+.stockViewTitle > div.share {width:4em; height:4em;}
+.stockViewTitle > div.share button {width:100%; height:100%; background:#fff url('../images/temp/ico_share.png') no-repeat left top; background-size:contain;}
+.stockViewTitle > div.share button span {position:relative; z-index:-1;}
+
+
+div.tooltip {}
+div.tooltip button,
+div.tooltip a {display:flex; align-items:center; justify-content:center; text-align:center; text-decoration:none;;}
+div.tooltip button::before,
+div.tooltip a::before {content:""; display:block; width:1.6em; height:1.6em; border:1px solid #ccc; border-radius:100%; color:#aaa; font-size:10px; line-height:1.6em; background:url('../images/temp/ico_que.png') no-repeat left top; background-size:contain;}
+div.tooltip button span,
+div.tooltip a span {display:none;}
+</style>
+			<div class="stockViewTitle">
+				<span>2주</span>
+				<div>
+					<h3 class="tit">적극투자형</h3>
+					<div class="tooltip"><a href="#test1111" class="help"><span>도움말</span></a></div>
+				</div>
+				<div class="share"><button type="button"><span>공유하기</span></button></div>
+			</div><!-- // stockViewTitle -->
+
+
+<style>
+.stockGraphWrap {border-bottom:0.5em solid #f5f5f5;}
+.stockGraphWrap > div:first-of-type {position:relative;}
+.stockGraphWrap > div:first-of-type div.per {position:absolute; top:0; right:0;}
+.stockGraphWrap > div.graph {padding:1.65625em 1.4375em 2.375em;}
+</style>
+			<div class="stockGraphWrap">
+				<div>
+					<h4>수익률</h4>
+					<div class="tooltip"><a href="#test111" class="help"><span>도움말</span></a></div>
+					<div class="per"><strong>8.02</strong><span>%</span></div>
+				</div>
+				<div class="graph">
+					<img src="../../images/temp/graph.png" alt="">
+				</div>
+			</div><!-- // stockGraphWrap -->
+
+			<div class="sectionTitle">
+				<div class="title">
+					<div>
+						<h3 class="tit">타이틀</h3>
+						<!-- <div class="help"><button type="button"><span>도움말</span></button></div> -->
+						<div class="tooltip"><a href="#test1111" class="help"><span>도움말</span></a></div>
+					</div>
+					<!-- <div class="more"><a href="#g"><span>더보기</span></a></div> -->
+					<div class="select">
+						<select name="" id="">
+							<option value="3개월 수익률 순">3개월 수익률 순</option>
+							<option value="6개월 수익률 순">6개월 수익률 순</option>
+						</select>
+					</div>
+				</div>
+				<div class="subTitle">2021.01.20 기준</div>
+				<div class="tab">
+					<button><span>버튼1</span></button>
+					<button><span>버튼2</span></button>
+				</div>
+			</div><!-- // sectionTitle -->
+
+			<div class="conGroup-content">
+				<div class="grid-item">
+					<div class="thum"><img src="https://via.placeholder.com/200x100" alt="image"></div>
+					<div class="tit">오늘의 주요 뉴스 타이틀</div>
+					<p>오늘의 주요뉴스 텍스트</p>
+				</div>
+				<div class="grid-item">
+					<div class="thum"><img src="https://via.placeholder.com/200x100" alt="image"></div>
+					<div class="tit">오늘의 주요 뉴스 타이틀</div>
+					<p>오늘의 주요뉴스 텍스트</p>
+				</div>
+				<div class="grid-item">
+					<div class="thum"><img src="https://via.placeholder.com/200x100" alt="image"></div>
+					<div class="tit">오늘의 주요 뉴스 타이틀</div>
+					<p>오늘의 주요뉴스 텍스트</p>
+				</div>
+				<div class="grid-item">
+					<div class="thum"><img src="https://via.placeholder.com/200x100" alt="image"></div>
+					<div class="tit">오늘의 주요 뉴스 타이틀</div>
+					<p>오늘의 주요뉴스 텍스트</p>
+				</div>
+			</div>
+			
+			<div class="layer help">
+				<!-- <div class="layer_dim"></div> --> <!-- 딤 삭제 -->
+				<div class="layer_inner">
+					<header><h1>도움말 제목</h1></header>
+					<div class="layer_content">
+						도움말 상세 내용입니다. 도움말 상세 내용입니다. 도움말 상세 내용입니다. 도움말 상세 내용입니다. 도움말 상세 내용입니다. 도움말 상세 내용입니다.
+					</div>
+					<div class="close"><button type="button"><span>닫기</span></button></div>
+				</div>
+			</div><!-- // layer help -->
+		</div><!-- // conGroupName -->
+
+
+		<div class="btn_test">팝업보기 샘플 버튼
+			<button type="button" class="full"><span>전체</span></button>
+			<button type="button" class="help" href="targetX"><span>도움말1</span></button>
+			<button type="button" class="help"><span>도움말2</span></button>
+			<button type="button" class="help"><span>도움말3</span></button>
+			<button type="button" class="help" href="targetXX"><span>도움말4</span></button>
+			<button type="button" class="modal"><span>모달</span></button>
+			<button type="button" class="toast"><span>토스트</span></button>
+		</div>
+		<div class="sectionTitle">
+			<div class="title">
+				<div>
+					<h3 class="tit">타이틀</h3>
+					<!-- <div class="help"><button type="button"><span>도움말</span></button></div> -->
+					<div class="tooltip"><a href="#test2222" class="help"><span>도움말</span></a></div>
+				</div>
+				<div class="more"><a href="#g"><span>더보기</span></a></div>
+			</div>
+			<div class="subTitle">2021.01.20 기준</div>
+		</div><!-- // sectionTitle -->
+
+		<div>
+			<ul class="sfo01_02">
+				<li><a href="#g">대우조선해양</a></li>
+				<li><a href="#g">현대미포조선</a></li>
+				<li><a href="#g">신세계건설</a></li>
+				<li><a href="#g">대림건설</a></li>
+				<li><a href="#g">강남제약헬스케어</a></li>
+				<li><a href="#g">기아차</a></li>
+			</ul>
+		</div>
+
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+
+		<div class="pass_app">pass_app</div>
+
+<!--
+		<div class="className scroll-wrapper">
+			<div class="scroll">
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+				<div class="item">항목</div>
+			</div>
+		</div>
+-->
+<style>
+.news-scroll {padding:0 1.0625em;}
+.news-scroll .item + .item {margin-left:0.75em;}
+.news-scroll .item-news {width:146px;}
+.news-scroll .item-news dt {border-radius:0.5em; overflow:hidden;}
+.news-scroll .item-news dt img {vertical-align:top;;}
+.news-scroll .item-news dd {margin-top:1em; color:#111; font-size:0.9375em; line-height:1.33333em; white-space:normal;
+	overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+}
+</style>
+		<div class="news-scroll scroll-wrapper">
+			<div class="scroll">
+				<div class="item">
+					<div class="item-news">
+						<dl>
+							<dt><img src="https://via.placeholder.com/146x100" alt="image1"></dt>
+							<dd>제주은행(006220) 급등세 기록중 +21.75%</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-news">
+						<dl>
+							<dt><img src="https://via.placeholder.com/146x100" alt="image"></dt>
+							<dd>일이삼사오육칠팔구십일이삼사오육칠팔구십일이</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-news">
+						<dl>
+							<dt><img src="https://via.placeholder.com/146x100" alt="image1"></dt>
+							<dd>제주은행(006220) 급등세 기록중 +21.75%</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-news">
+						<dl>
+							<dt><img src="https://via.placeholder.com/146x100" alt="image1"></dt>
+							<dd>제주은행(006220) 급등세 기록중 +21.75%</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-news">
+						<dl>
+							<dt><img src="https://via.placeholder.com/146x100" alt="image"></dt>
+							<dd>일이삼사오육칠팔구십일이삼사오육칠팔구십일이</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-news">
+						<dl>
+							<dt><img src="https://via.placeholder.com/146x100" alt="image1"></dt>
+							<dd>제주은행(006220) 급등세 기록중 +21.75%</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<style>
+.itemClassName {width:8em; height:8.625em; padding:18px 16px 16px; background-color:#f9f9f9; border-radius:0.5em;}
+.itemClassName dl {display:flex; flex-direction:column; justify-content:space-between; height:100%;}
+.itemClassName dl dt {flex:1; font-size:1.125em; font-weight:bold; line-height:1.16666em;;}
+.itemClassName dl dd {align-self:flex-end;}
+.itemClassName dl dd.date {color:rgba(0,0,0,0.5); font-size:0.75em; line-height:1.08333em;}
+.itemClassName dl dd.per {margin-top:0.5em; color:#ff6600; line-height:1.3125em;}
+.itemClassName dl dd.per strong {font-size:1.125em;}
+.itemClassName dl dd.per span {}
+.scroll-wrapper.roboAI .item + .item {margin-left:12px;}
+</style>
+		<div class="roboAI scroll-wrapper">
+			<div class="scroll">
+				<div class="item">
+					<div class="itemClassName">
+						<dl>
+							<dt>적극투자형</dt>
+							<dd class="date">2020년 12월</dd>
+							<dd class="per"><strong>79.96</strong><span>%</span></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="item">
+					<div class="itemClassName">
+						<dl>
+							<dt>코스피<br />업&다운</dt>
+							<dd class="date">2020년 12월</dd>
+							<dd class="per"><strong>79.96</strong><span>%</span></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="item">
+					<div class="itemClassName">
+						<dl>
+							<dt>위험중립형</dt>
+							<dd class="date">2020년 12월</dd>
+							<dd class="per"><strong>79.96</strong><span>%</span></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="item">
+					<div class="itemClassName">
+						<dl>
+							<dt>적극투자형</dt>
+							<dd class="date">2020년 12월</dd>
+							<dd class="per"><strong>79.96</strong><span>%</span></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="item">
+					<div class="itemClassName">
+						<dl>
+							<dt>코스피<br />업&다운</dt>
+							<dd class="date">2020년 12월</dd>
+							<dd class="per"><strong>79.96</strong><span>%</span></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="item">
+					<div class="itemClassName">
+						<dl>
+							<dt>위험중립형</dt>
+							<dd class="date">2020년 12월</dd>
+							<dd class="per"><strong>79.96</strong><span>%</span></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="item">
+					<div class="itemClassName">
+						<dl>
+							<dt>적극투자형</dt>
+							<dd class="date">2020년 12월</dd>
+							<dd class="per"><strong>79.96</strong><span>%</span></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="item">
+					<div class="itemClassName">
+						<dl>
+							<dt>코스피<br />업&다운</dt>
+							<dd class="date">2020년 12월</dd>
+							<dd class="per"><strong>79.96</strong><span>%</span></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="item">
+					<div class="itemClassName">
+						<dl>
+							<dt>위험중립형</dt>
+							<dd class="date">2020년 12월</dd>
+							<dd class="per"><strong>79.96</strong><span>%</span></dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="btn_test">팝업보기 샘플 버튼
+			<button type="button" class="full"><span>전체</span></button>
+			<button type="button" class="help" href="targetX"><span>도움말1</span></button>
+			<button type="button" class="help"><span>도움말2</span></button>
+			<button type="button" class="help"><span>도움말3</span></button>
+			<button type="button" class="help" href="targetXX"><span>도움말4</span></button>
+			<button type="button" class="modal"><span>모달</span></button>
+			<button type="button" class="toast"><span>토스트</span></button>
+		</div>
+
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+		컨텐츠<br />컨텐츠<br />컨텐츠<br />
+	</section>
+
+	<div class="indexConGroup">
+		<div class="sectionTitle">
+			<div class="title">
+				<div>
+					<h3 class="tit">주요 공시 공약</h3>
+					<div class="tooltip"><a href="#test1111" class="help"><span>도움말</span></a></div>
+				</div>
+				<div class="more"><a href="#g"><span>더보기</span></a></div>
+			</div>
+		</div><!-- // sectionTitle -->
+<style>
+.ddd {}
+.ddd::after {content:""; display:block; height:0; clear:both;}
+.ddd li {display:inline-block; float:left; margin:0 0.5em 0.75em 0;}
+.ddd li a {display:flex; font-size:1em; line-height:2.75em; padding:0 1.75em;; background-color:#ff6600; border-radius:100em; text-decoration:none; color:#fff; font-size:0.875em; font-weight:bold;} 
+</style>
+		<div>
+			<ul class="ddd">
+				<li><a href="#g"><span>대우조선해양</span></a></li>
+				<li><a href="#g"><span>현대미포조선</span></a></li>
+				<li><a href="#g"><span>신세계건설</span></a></li>
+				<li><a href="#g"><span>대림건설</span></a></li>
+				<li><a href="#g"><span>강남제약헬스케어</span></a></li>
+				<li><a href="#g"><span>기아차</span></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="indexConGroup">
+		<div class="sectionTitle">
+			<div class="title">
+				<div>
+					<h3 class="tit">오늘의 주요뉴스</h3>
+					<div class="tooltip"><a href="#test1111" class="help"><span>도움말</span></a></div>
+				</div>
+			</div>
+		</div><!-- // sectionTitle -->
+
+
+		<div class="item-list">
+			<div class="item news">
+				<div class="thum"><img src="https://via.placeholder.com/116x80" alt="image"></div>
+				<div class="txt">
+					<p>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일</p>
+					<span class="date">2020.12.03</span>
+				</div>
+			</div>
+			<div class="item news">
+				<div class="txt">
+					<p>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일</p>
+					<span class="date">2020.12.03</span>
+				</div>
+			</div>
+			<div class="item news">
+				<div class="thum"><img src="https://via.placeholder.com/116x80" alt="image"></div>
+				<div class="txt">
+					<p>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일</p>
+					<span class="date">2020.12.03</span>
+				</div>
+			</div>
+			<div class="item news">
+				<div class="thum"><img src="https://via.placeholder.com/116x80" alt="image"></div>
+				<div class="txt">
+					<p>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일</p>
+					<span class="date">2020.12.03</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="indexConGroup">
+		<div class="sectionTitle">
+			<div class="title">
+				<div>
+					<h3 class="tit">인기테마주</h3>
+					<div class="tooltip"><a href="#test1111" class="help"><span>도움말</span></a></div>
+				</div>
+			</div>
+		</div><!-- // sectionTitle -->
+
+<style>
+.item.thema {padding:1.5em 0;}
+.item.thema + .item.thema {border-top:1px solid #eee;}
+.item.thema dl {position:relative;}
+.item.thema dl dt {color:#111; font-size:1.125em; line-height:1.16666em; font-weight:bold;}
+.item.thema dl dd.txt {margin-top:0.57142em; color:#999; font-size:0.875em; line-height:1.28571em;}
+.item.thema dl dd.per {position:absolute; top:0; right:0; font-size:1.375em; line-height:0.95454em; overflow:hidden;}
+</style>
+
+		<div class="item-list">
+			<div class="item thema">
+				<dl>
+					<dt>반도체</dt>
+					<dd class="txt">컴퓨터, 스마트폰 등 주요 스마트 기기의 두뇌인 반도체를 생산하는 기업</dd>
+					<dd class="per up"><strong>8.02</strong>%</dd>
+				</dl>
+			</div>
+			<div class="item thema">
+				<dl>
+					<dt>2차전지</dt>
+					<dd class="txt">컴퓨터, 스마트폰 등 주요 스마트 기기의 두뇌인 반도체를 생산하는 기업</dd>
+					<dd class="per up"><strong>8.02</strong>%</dd>
+				</dl>
+			</div>
+			<div class="item thema">
+				<dl>
+					<dt>통신</dt>
+					<dd class="txt">컴퓨터, 스마트폰 등 주요 스마트 기기의 두뇌인 반도체를 생산하는 기업</dd>
+					<dd class="per up"><strong>8.02</strong>%</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="indexConGroup">
+		<div class="sectionTitle">
+			<div class="title">
+				<div>
+					<h3 class="tit">로보AI 포트폴리오</h3>
+					<div class="tooltip"><a href="#test1111" class="help"><span>도움말</span></a></div>
+				</div>
+			</div>
+			<div class="tab">
+				<button type="button" class="active"><span>누적 수익률 순</span></button>
+				<button type="button"><span>3개월 수익률 순</span></button>
+			</div>
+		</div><!-- // sectionTitle -->
+
+<style>
+.item.roboAI {display:flex; flex-direction:row; padding:1.5em 0; justify-content:space-between;}
+.item.roboAI + .item.roboAI {border-top:1px solid #eee;}
+.item.roboAI > span:first-of-type {align-self:center; width:3.2em; margin:0 12px 0 4px; background-color:#222; color:#fff; border-radius:100em; font-size:0.625em; line-height:2em; overflow:hidden; text-align:center;;}
+.item.roboAI > span:first-of-type.week1 {background-color:#FFECD6; color:#FF7926;}
+.item.roboAI > span:first-of-type.week2 {background-color:#D4F2E6; color:#08B46E;}
+.item.roboAI > span:first-of-type.week3 {background-color:#DBF1FF; color:#328CF5;}
+.item.roboAI > span:first-of-type.week4 {background-color:#ECE5FF; color:#793FFA;}
+.item.roboAI > span:first-of-type + div {}
+.item.roboAI > div.per {}
+.item.roboAI > div:first-of-type {flex:1;}
+.item.roboAI > div:first-of-type p {display:inline-block; color:#111; font-size:1.125em; font-weight:bold; line-height:1.16666em;}
+.item.roboAI > div:first-of-type p + i.new {display:inline-block; width:1.125em; height:1.125em; background-color:#ff6600; border-radius:100%; color:#fff; line-height:1.125em; text-align:center; overflow:hidden; vertical-align:top;}
+.item.roboAI > div:first-of-type span.date {display:block; margin-top:0.5em; color:#aaa; font-size:0.75em; line-height:1.66666em;}
+.item.roboAI > div:first-of-type span::before {content:""; display:block; height:0; clear:both;}
+</style>
+
+		<div class="item-list">
+			<div class="item roboAI">
+				<span class="week2">2주</span>
+				<div>
+					<p>적극투자형</p>
+					<i class="new">새글</i>
+					<span class="date">2021.01.01 ~ 2021.01.14</span>
+				</div>
+				<div class="per up"><strong>79.96</strong>%</div>
+			</div>
+			<div class="item roboAI">
+				<span class="week2">2주</span>
+				<div>
+					<p>위험중립형</p>
+					<span class="date">2021.01.01 ~ 2021.01.14</span>
+				</div>
+				<div class="per up"><strong>79.96</strong>%</div>
+			</div>
+			<div class="item roboAI">
+				<span class="week1">1주</span>
+				<div>
+					<p>안전추구형</p>
+					<span class="date">2021.01.01 ~ 2021.01.14</span>
+				</div>
+				<div class="per up"><strong>79.96</strong>%</div>
+			</div>
+			<div class="item roboAI">
+				<span class="week3">3주</span>
+				<div>
+					<p>롱숏전략</p>
+					<span class="date">2021.01.01 ~ 2021.01.14</span>
+				</div>
+				<div class="per up"><strong>79.96</strong>%</div>
+			</div>
+			<div class="item roboAI">
+				<span class="week4">4주</span>
+				<div>
+					<p>코스피 업&다운</p>
+					<span class="date">2021.01.01 ~ 2021.01.14</span>
+				</div>
+				<div class="per up"><strong>79.96</strong>%</div>
+			</div>
+			<div class="item roboAI">
+				<span class="week1">1주</span>
+				<div>
+					<p>글로벌ETF</p>
+					<span class="date">2021.01.01 ~ 2021.01.14</span>
+				</div>
+				<div class="per up"><strong>79.96</strong>%</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="indexConGroup">
+		<div class="sectionTitle">
+			<div class="title">
+				<div>
+					<h3 class="tit">기간 외국인 매수 상위</h3>
+					<div class="tooltip"><a href="#test1111" class="help"><span>도움말</span></a></div>
+				</div>
+			</div>
+		</div><!-- // sectionTitle -->
+
+<style>
+.item.table {display:flex; flex-direction:row; padding:1.25em 0 1.0625em; justify-content:space-between; align-items:center;}
+.item.table + .item.table {border-top:1px solid #eee;}
+.item.table div.num {width:1.8em; padding:0 0 0 0.2em; color:#ccc; font-size:1.125em;}
+.item.table dl {display:flex; flex:1; justify-content:space-between; align-items:baseline;}
+.item.table dl dt {flex:1;}
+.item.table dl dd {color:#ff6600;}
+.item.table dl dd.before {position:relative; margin-right:0.35714em; padding-right:1em; color:#999; font-size:0.875em;}
+.item.table dl dd.before::after {content:""; display:block; position:absolute; right:0; top:50%; width:0.4em; height:0.4em; border-width:1px 1px 0 0; border-style:solid; border-color:#aaa; transform:translate(-50%) rotate(45deg); transform-origin:100% 0 ;}
+.item.table dl dd.after {}
+.item.table dl dd {}
+.item.table div.btn button {position:relative; width:2em; height:2em;}
+.item.table div.btn button::before {content:""; display:block; width:50%; height:50%; border:2px solid #ff6600; position:absolute; top:50%; left:50%; transform:rotate(45deg) translate(-50%, 0%);}
+
+
+/* before & after */
+/* dl.bna {display:flex; flex:1; justify-content:space-between; align-items:baseline;}
+dl.bna dt {flex:1;}
+dl.bna dd {color:#ff6600;}
+dl.bna dd.before {position:relative; margin-right:0.35714em; padding-right:1em; color:#999; font-size:0.875em;}
+dl.bna dd.before::after {content:""; display:block; position:absolute; right:0; top:50%; width:0.4em; height:0.4em; border-width:1px 1px 0 0; border-style:solid; border-color:#aaa; transform:translate(-50%) rotate(45deg); transform-origin:100% 0;} */
+</style>
+
+		<div class="item-list">
+			<div class="item table">
+				<div class="num"><strong>1</strong></div>
+				<dl>
+					<dt>현대차</dt>
+					<dd>2,234억원</dd>
+				</dl>
+			</div>
+
+			<div class="item table">
+				<div class="num"><strong>2</strong></div>
+				<dl>
+					<dt>현대차</dt>
+					<dd class="before">2,234억원</dd>
+					<dd class="after">2,234억원</dd>
+				</dl>
+			</div>
+
+			<div class="item table">
+				<div class="num"><strong>3</strong></div>
+				<dl>
+					<dt>현대차</dt>
+					<dd>2,234억원</dd>
+					<dd>2,234억원</dd>
+					<dd>2,234억원</dd>
+				</dl>
+				<div class="btn"><button type="button"><span>버튼</span></button></div>
+			</div>
+			
+		</div>
+	</div>
+
+<style>
+.panal {}
+
+.panal .item {padding:2em 0; transition:background-color 0.15s;}
+.panal .item.active {background-color:#f9f9f9;}
+.panal .item + .item {border-top:1px solid #eee;}
+.panal .item > div:first-of-type {display:flex; justify-content:space-between; align-items:center;}
+.panal .item > div:first-of-type div.chk {align-self:center; position:relative; padding-right:0.5em;}
+.panal .item > div:first-of-type div.chk label {display:block; position:relative; width:1.5em; height:1.5em; border-radius:100%;}
+.panal .item > div:first-of-type div.chk label input {position:absolute; opacity:0; cursor:pointer; height:0; width:0; z-index:-1;}
+.panal .item > div:first-of-type div.chk input[type="checkbox"] {position:absolute; top:0; left:0; width:100%; height:100%; border-radius:100%; overflow:hidden; display:block;}
+.panal .item > div:first-of-type div.chk label span.checkmark {position:absolute; top:0; left:0; width:100%; height:100%; background-color:#ccc; border-radius:100%;}
+.panal .item > div:first-of-type div.chk label span.checkmark::before {content:""; display:block; position:absolute; top:50%; left:50%; width:17px; height:7px; border-width:0 0 2px 2px; border-style:solid; border-color:#fff; transform-origin:0 100%; transform:rotate(-45deg) translateY(-30%);}
+.panal .item > div:first-of-type div.chk label input:checked + span.checkmark {background-color: #ff6600;}
+.panal .item > div:first-of-type dl {flex:1; display:flex; justify-content:space-between; align-items:center;}
+.panal .item > div:first-of-type dl dt {flex:1; color:#111; font-size:1.0625em; font-weight:bold; line-height:1.41176em;}
+.panal .item > div:first-of-type dl dd {}
+.panal .item > div:first-of-type dl dd span {color:#aaa; font-size:0.75em;}
+.panal .item > div:first-of-type dl dd strong.up{color:#ff6600;}
+.panal .item > div:first-of-type dl dd strong.down{color:#0066ff}
+
+.panal .item > div:last-of-type {display:flex; justify-content:space-around; margin-top:1em; text-align:center;}
+.panal .item > div:last-of-type dl {width:100%;}
+.panal .item > div:last-of-type dl dt span {display:inline-block; height:1.33333em; padding:0 0.25em; border-radius:0.33333em; color:#aaa; font-size:0.75em; line-height:1.33333em;}
+.panal .item > div:last-of-type dl dt span.xx {color:#fff; background-color:#ff6600	;}
+.panal .item > div:last-of-type dl dd {margin-top:0.375em;}
+.panal .item > div:last-of-type dl dd span {display:inline-block; color:#111; font-size:1.0625em; line-height:1.25em;}
+</style>
+
+
+	<div class="panal">
+		<div class="item-list">
+			<div class="item">
+				<div>
+					<div class="chk">
+						<label>
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<dl>
+						<dt>DGB금융지주</dt>
+						<dd>
+							<span>현재</span>
+							<strong class="up">38,955원</strong>
+						</dd>
+					</dl>
+				</div>
+				<div class="invest">
+					<dl>
+						<dt><span class="xx">공매도</span></dt>
+						<dd><span>2,642,000원</span></dd>
+					</dl>
+					<dl>
+						<dt><span>목표</span></dt>
+						<dd><span>2,642,000원</span></dd>
+					</dl>
+					<dl>
+						<dt><span>투자비중</span></dt>
+						<dd><span>10%</span></dd>
+					</dl>
+				</div>
+			</div>
+			<div class="item">
+				<div>
+					<div class="chk">
+						<label>
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<dl>
+						<dt>일이삼사오육칠팔구십</dt>
+						<dd>
+							<span>현재</span>
+							<strong class="down">38,955원</strong>
+						</dd>
+					</dl>
+				</div>
+				<div class="invest">
+					<dl>
+						<dt><span class="xx">공매도</span></dt>
+						<dd><span>2,000원</span></dd>
+					</dl>
+					<dl>
+						<dt><span>목표</span></dt>
+						<dd><span>2,000원</span></dd>
+					</dl>
+					<dl>
+						<dt><span>투자비중</span></dt>
+						<dd><span>10%</span></dd>
+					</dl>
+				</div>
+			</div>
+			<div class="item">
+				<div>
+					<div class="chk">
+						<label>
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<dl>
+						<dt>DGB금융지주</dt>
+						<dd>
+							<span>현재</span>
+							<strong>38,955원</strong>
+						</dd>
+					</dl>
+				</div>
+				<div class="invest">
+					<dl>
+						<dt><span class="xx">공매도</span></dt>
+						<dd><span>2,000원</span></dd>
+					</dl>
+					<dl>
+						<dt><span>목표</span></dt>
+						<dd><span>2,000원</span></dd>
+					</dl>
+					<dl>
+						<dt><span>투자비중</span></dt>
+						<dd><span>10%</span></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div><!-- // panal -->
+
+
+	<div class="accordion_list">
+		<div class="item table">
+			<div class="tit faq">
+				<div class="item table">
+					<dl class="bna">
+						<dt><span>신세계건설</span></dt>
+						<dd class="before">105,000원</dd>
+						<dd class="after">132,000원</dd>
+					</dl>
+					<div class="btn"><button>버튼</button></div>
+				</div>
+			</div>
+			<div class="con" style="display:none;">질문에 대한 답변이 출력됩니다. 질문에 대한 답변이 출력됩니다. 질문에 대한 답변이 출력됩니다. 질문에 대한 답변이 출력됩니다. 질문에 대한 답변이 출력됩니다. 질문에 대한 답변이 출력됩니다. 질문에 대한 답변이 출력됩니다. 질문에 대한 답변이 출력됩니다. 질문에 대한 답변이 출력됩니다. 질문에 대한 답변이 출력됩니다. </div>
+		</div>
+	</div>
+
+
+	<div class="main_notice">
+		<dl>
+			<dt>공지</dt>
+			<dd><a href="#g">{공지사항 제목공지사항 제목공지사항 제목공지사항 제목공지사항 제목공지사항 제목공지사항 제목}</a></dd>
+		</dl>
+	</div><!-- // main_notice -->
+
+
+	<footer>
+		<ul class="site_info">
+			<li><a href="#g">이용약관</a></li>
+			<li><a href="#g"><strong>개인정보처리방침</strong></a></li>
+			<li><a href="#g">투자유의사항</a></li>
+			<!-- <li><a href="#g">공지사항</a></li> -->
+		</ul>
+		<dl>
+			<dt>고객센터</dt>
+			<dd><p>가입/해지 문의 : <a href="" class="tel">114</a> 또는 <a href="" class="tel">1800-1637</a></p></dd>
+			<dd><p>주식관련 문의 : <a href="tel:02-318-0802" class="tel">02-318-0802</a><span></span></p></dd>
+			<dd><p>(평일 09:00~18:00, 점심시간 12:00~13:00)</p></dd>
+		</dl>
+	</footer>
+
+	<button class="toTop"><span>위로</span></button>
+
+</div><!-- // wrap -->
+
+
+
+<div class="layer full">
+	<div class="layer_inner">
+		<header><h1>화면명</h1></header>
+		<div class="layer_content">
+			레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />레이어 컨텐츠가 들어갑니다.<br />
+		</div>
+		<div class="close"><button type="button"><span>닫기</span></button></div>
+	</div>
+</div>
+
+
+<!--
+<div class="layer modal">
+	<div class="layer_dim"></div>
+	<div class="layer_inner">
+		<header><h1>팝업제목</h1></header>
+		<div class="layer_content">모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br />모달팝업 내용입니다.<br /></div>
+		<div class="modal_btn">
+			<div><button type="button" class="close"><span>취소</span></button></div>
+			<div><button type="button" class="next"><span>확인</span></button></div>
+		</div>
+	</div>
+</div>
+-->
+
+
+<div class="layer modal">
+	<div class="layer_dim"></div>
+	<div class="layer_inner">
+		<dl>
+			<dt>스탁 서비스 가입해지</dt>
+			<dd>서비스를 해지하시겠습니까?<br />해지 시 다양한 이벤트 혜택과<br />서비스 이용이 제한됩니다.</dd>
+		</dl>
+		<div class="modal_btn">
+			<div><button type="button" class="close"><span>취소</span></button></div>
+			<div><button type="button" class="next"><span>확인</span></button></div>
+		</div>
+	</div>
+</div>
+
+
+<style>
+/* 토스트 팝업 */
+div.layer.toast {display:none; position:fixed; right:20px; bottom:20px; left:20px; animation-name:ani_toast; animation-duration:0.3s; animation-iteration-count:1;}
+div.layer.toast > div {display:flex; justify-content:space-between; align-items:center; padding:4px; border-radius:100px; overflow:hidden; background-color:#ff6600; box-shadow:2px 2px 4px rgba(0,0,0,0.15)}
+div.layer.toast > div i {display:inline-block; width:2em; height:2em; background-color:#fff; border-radius:100%;}
+div.layer.toast > div p {flex:1; padding:0 0.5em; color:#fff; text-align:left;}
+div.layer.toast > div a {color:#fff; text-decoration:none;}
+div.layer.toast .close button {position:relative; background-color:none; border:0 none; width:2em; height:2em;}
+div.layer.toast .close button::before,
+div.layer.toast .close button::after {content:""; display:block; position:absolute; top:50%; left:50%; width:50%; height:2px; background-color:#fff;}
+div.layer.toast .close button::before {transform:translate(-50%,-50%) rotate(45deg)}
+div.layer.toast .close button::after {transform:translate(-50%,-50%) rotate(-45deg)}
+div.layer.toast .close button span {position:relative; z-index: -1;}
+@keyframes ani_toast { 0% {transform: translateX(80%); opacity:0;} 100% {transform: translateX(0%); opacity:1;} }
+</style>
+<div class="layer toast">
+	<div>
+		<i>아이콘</i>
+		<p><a href="#g">fds{안내 문구 노출}</a></p>
+		<div class="close"><button type="button"><span>닫기</span></button></div>
+	</div>
+</div>
+
+
+<style>
+div.layer.ddd {}
+</style>
+<div class="layer ddd">
+	<div class="inner">
+		<div class="close">
+			<button type="button"><span>닫기</span></button>
+		</div>
+	</div>
+	<div>
+		<div class="today">다시 보지 않기</div>
+		<div class="close">닫기</div>
+	</div>
+</div>
+
+<!-- <style>
+.evLayer1 * {list-style:none;}
+.evLayer1 img {width:100%; max-width:100%;}
+.evLayer1 ul, .evLayer1 li {margin:0; padding:0;}
+.evLayer1 {font-size:calc(5px + 2.3vw); letter-spacing:-.5vw;}
+.evLayer1 .btn_ev_layer {position:fixed; right:5vw; top:8.3vw; width:13.8vw; height:13.8vw; border-radius:100%; background-color: #ff3782; color:#fff; box-shadow:0 2vw 2vw rgba(0,0,0,0.2); z-index:2; overflow:hidden;}
+.evLayer1 .pop_ev_layer {position:fixed; top:25vw; left:15vw; right:5vw; max-height:80vh; box-shadow:0 4.4vw 3vw rgba(0,0,0,0.2); border-radius:3vw; overflow:hidden; z-index:2;}
+.evLayer1 .pop_ev_layer .evBtn {display:block; margin-top:3vw; text-align:center;}
+.evLayer1 .pop_ev_layer .evBtn a {display:block; margin:0; padding:3vw 0; background-color:#ff3782; border-radius:11.1vw; color:#fff; font-size:1.3em; letter-spacing:0; font-weight:500;}
+.evLayer1 .pop_ev_layer .today {position:relative; padding:3vw; background-color: #f1f1f1;}
+.evLayer1 .pop_ev_layer .close {position:absolute; right:2.7vw; top:5.4vw; width:6.1vw; height:6.1vw;}
+.evLayer1 .pop_ev_layer .inwrap {padding:5vw; background-color:#fff; letter-spacing:0;}
+.evLayer1 .pop_ev_layer .inwrap li {padding:0.3vw 0; color:#666;}
+.evLayer1 .pop_ev_layer .inwrap li span {padding-right:2.4vw; color:#333; font-weight:600;}
+.evLayer1 .ev_chk {display:block; position:relative; padding-left:6vw;  cursor:pointer; font-size:0.9em; letter-spacing:0; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;}
+.evLayer1 .ev_chk input {position:absolute; opacity:0; cursor:pointer; height:0; width:0;}
+.evLayer1 .ev_chk .checkmark {position: absolute; top:0; left:0; height:4vw; width:4vw; background-color:#dddddd; border:1px solid #bbbbbb;}
+.evLayer1 .ev_chk input:checked ~ .checkmark {background-color: #fff;}
+.evLayer1 .ev_chk .checkmark:after {content:""; position:absolute; display:none;}
+.evLayer1 .ev_chk input:checked ~ .checkmark:after {display: block;}
+.evLayer1 .ev_chk .checkmark:after {left:1.2vw; top:0vw; width:1vw; height:2.5vw; border:solid #666666; border-width:0 2px 2px 0; -webkit-transform:rotate(45deg); -ms-transform:rotate(45deg); transform:rotate(45deg);}
+
+.bounceDown {animation-name:bounceDown; animation-timing-function: ease; animation-duration: 0.3s; animation-iteration-count: 1;}
+@keyframes bounceDown {
+	0% {opacity:0; transform:translate(0px, -30px)}
+	50% {opacity:0.8; transform:translate(0px, 10px)}
+	100% {opacity:1; transform:translate(0px, 0px)}
+}
+
+.floating {animation-name:floating; animation-timing-function: ease; animation-duration: 1s; animation-iteration-count:infinite;}
+@-webkit-keyframes floating {50% {transform:translateY(-4px);}}
+
+.giro3D{animation: 1.5s giro3D 2;animation-delay: 1.5s;}
+@-webkit-keyframes giro3D{
+40%{-webkit-transform: perspective(800px) translateZ(120px) rotateY(170deg);}
+50%{-webkit-transform: perspective(800px) translateZ(120px) rotateY(190deg);}
+80%{-webkit-transform: perspective(800px) translateZ(0px) rotateY(360deg);}
+100%{-webkit-transform: perspective(800px) rotateY(360deg);}
+}
+</style>
+<div class="evLayer1">
+	<div class="btn_ev_layer floating" onclick="aa();"><div class="giro3D"><img src="./img/ev_btn_190813.png" alt="이벤트 보기"></div></div>
+	<div class="pop_ev_layer bounceDown" style="display: none;">
+		<div class="evVeiw">
+			<div><img src="./img/ev_img_190813.png" alt="인생행운 알아보고 상품권 받으러 가자!"></div>
+			<div class="inwrap">
+				<ul>
+					<li><span>이벤트 기간</span>2019.08.13 - 2019.09.12</li>
+					<li><span>경품</span>신세계 상품권 1만원권</li>
+					<li><span>당첨기준</span>U+운세 유료 가입자 중 추첨</li>
+				</ul>
+				<span class="evBtn"><a href="#">이벤트 참여하기</a></span>
+			</div>
+		</div>
+		<div class="today"><label class="ev_chk">오늘 하루자동으로 열지 않음<input type="checkbox"><span class="checkmark"></span></label></div>
+		<div class="close" onclick="bb();"><img src="./img/ev_btncl_190813.png" alt="이벤트 닫기"></div>
+	</div>
+</div> -->
+
+<div class="ev_layer leftBottom" style="display:none;"><!-- leftTop, rightTop, rightBottom, leftBottom -->
+	<div class="triger floating"><button type="button"><span>버튼</span></button></div>
+	<!-- .ev_layer 가 Top일때 트리거 위치값 지정해주어야 함. Bottom은반대. 지정하지 않는 경우 60px 고정.
+	<div class="triger floating" style="top:0px;"><button type="button"><span>버튼</span></button></div>
+	<div class="triger floating" style="bottom:0px;"><button type="button"><span>버튼</span></button></div>
+	-->
+	<div class="content" style="display:none;">
+		<div class="img"><img src="https://via.placeholder.com/200x100" alt="image"></div>
+		<div class="con">
+			<div class="inwrap">
+				<ul>
+					<li><span class="tit">이벤트기간</span><span class="txt">2021.01.01 ~ 2021.02.28</span></li>
+					<li><span class="tit">당첨자발표</span><span class="txt">2021.04.08</span></li>
+					<li><span class="tit">경품</span><span class="txt">신세계상품권 1만원권(500명)</span></li>
+					<li><span class="tit">대상</span><span class="txt">T펀드정보 신규 유료 가입 후 <br />30일 이상 유지회원</span></li>
+				</ul>
+				<div class="evBtn"><button type="button"><span>이벤트 참여하기</span></button></div>
+			</div>
+		</div>
+		<div class="today">
+			<label class="ev_chk">
+				<span class="txt">오늘 하루자동으로 열지 않음</span>
+				<input type="checkbox">
+				<span class="checkmark"></span>
+			</label>
+		</div>
+		<div class="close">이벤트 닫기</div>
+	</div>
+</div><!-- // ev_layer -->
+
+
+<!-- 도움말 팝업 -->
+<!-- 제목 + 도움말 팝업 -->
+<div class="layer help" id="test1111">
+	<div class="layer_inner">
+		<dl>
+			<dt>로보AI 포트폴리오 test1111</dt>
+			<dd>당사가 제시한 포트폴리오 수익률 성과를 나타낸 자료입니다. 포트폴리오 수익률은 제시된 종목의 수익률을 종목별 비중에 따라 반영하여 실제 투자결과와 유사하게 계산합니다. 종목 수익률은 포트폴리오 제공 직전 거래일 종가 대비 포트폴리오 제공 기간의 마지막 거래일 종가 기준으로 계산합니다. 각 포트폴리오 제공 주기에 따라 주간 또는 월간마다 수익률을 누적하여 제공합니다.</dd>
+		</dl>
+		<div class="close"><button type="button"><span>닫기</span></button></div>
+	</div>
+</div><!-- // layer help -->
+
+<!-- 제목 + 도움말 팝업 -->
+<div class="layer help" id="test2222">
+	<div class="layer_inner">
+		<dl>
+			<dt>로보AI 포트폴리오 test2222</dt>
+			<dd>당사가 제시한 포트폴리오 수익률 성과를 나타낸 자료입니다. 포트폴리오 수익률은 제시된 종목의 수익률을 종목별 비중에 따라 반영하여 실제 투자결과와 유사하게 계산합니다. 종목 수익률은 포트폴리오 제공 직전 거래일 종가 대비 포트폴리오 제공 기간의 마지막 거래일 종가 기준으로 계산합니다. 각 포트폴리오 제공 주기에 따라 주간 또는 월간마다 수익률을 누적하여 제공합니다.</dd>
+		</dl>
+		<div class="close"><button type="button"><span>닫기</span></button></div>
+	</div>
+</div><!-- // layer help -->
+<!-- // 도움말 팝업 -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../../js/slick.js"></script>
+<script src="../../js/temp.js"></script>
+<script>
+
+$(document).ready(function(){
+
+	var pos = 0;
+	$(window).scroll(function(event){ 
+		pos = $(window).scrollTop();
+	});
+
+
+	/* 팝업 닫기 클릭시 스크롤 원위치 */
+	$('.layer .close').on("click", function(){
+		$(this).parents('.layer').hide();
+		let has = $(this).parents('.layer').attr('class');
+		if(has.indexOf("full") > 0 || has.indexOf("modal") > 0) {
+			scrollRevert();
+		} else {
+			// scrollRevert();
+		}
+	})
+
+
+
+	/* 딤 클릭시 팝업 닫기 */
+	$(".layer .layer_dim").on("click", function(){
+		$(this).parents('.layer').hide();
+	})
+
+
+	/* 주소 가져와서 포함텍스트 확인 후 액션 패스로그인 테스트 요청 */
+	$("a").on("click", function(){
+		var getUrl = window.location.href;
+		if(getUrl.indexOf("pass_app") > 0) {
+			var pass_app = $(".pass_app").offset().top;
+			$("html,body").stop().animate({ scrollTop : pass_app }, 300);
+		}
+	})
+
+
+	/* 도움말 모달팝업 위치 지정 */
+	/*
+	$(".sectionTitle button").on("click", function(){
+		var btnHelpTop = $(this).offset().top;
+		$(this).parent().siblings(".layer").css({
+			top : btnHelpTop
+		}).show();
+	})
+	*/
+
+
+	/* 전체 팝업 */
+	$(".btn_test button.full").on("click", function(){
+		scrollFixed();
+		$(".layer.full").show();
+	})
+
+	/* 전체팝업 시 기존 위치 고정 */
+	var dkdkdk;
+	function scrollFixed(params) {
+		console.log("scrollFixed 실행")
+		/* 스크롤 값 가져오기 */
+		dkdkdk = pos;
+
+		/* 스크롤 값을 마진으로 바꿔서 적용하기 */
+		$(".wrap").css({
+			position : 'fixed',
+			marginTop : dkdkdk * -1
+		})
+	}
+
+	/* 전체팝업 시 기존 위치 고정 해제 */
+	function scrollRevert(){
+		console.log("scrollRevert 실행")
+		dkdkdk = dkdkdk * -1; // 마진값을 스크롤 값으로 바꾸기
+		/* 스크롤 값만큼 화면 움직이기 */
+		$(".wrap").css({
+			position : 'static',
+			marginTop : 0
+		})
+		$(window).scrollTop(dkdkdk * -1)
+	}
+
+
+var bodyFixed;
+bodyFixed = {
+	item : document.querySelector(".wrap"),
+	reset : function(pos){
+		console.log("scrollFixed 원복")
+	},
+	action : function(pos) {
+		console.log("scrollFixed 실행")
+	}
+}
+
+
+	$(".btn_test button.modal").on("click", function(){
+		scrollFixed();
+		$(".layer.modal").show();
+	})
+
+	$(".btn_test button.toast").on("click", function(){
+		$(".layer.toast").show();
+	})
+
+	
+
+	
+
+
+
+
+
+function testPop(){
+	var $triger = $(".ev_layer .triger");
+	var trigerTop = $triger.offset().top;
+	var trigerHidth = $triger.outerHeight();
+	
+	var xx = $(".ev_layer").attr("class")
+
+	if(xx.indexOf("Top") > 0) {
+		$(".ev_layer .content").addClass("bounceInDown");
+		$(".ev_layer .content").css({
+			top : trigerTop + trigerHidth - pos
+		})
+	} else {
+		$(".ev_layer .content").addClass("bounceInUp");
+		$(".ev_layer .content").css({
+			bottom : window.innerHeight - trigerTop + pos
+		})
+	}
+}
+$(".ev_layer .triger").on("click", function(){
+	$(this).parents(".ev_layer").find(".content").show();
+	$(this).removeClass("floating")
+	testPop();
+})
+$(".ev_layer .close").on("click", function(){
+	$(this).parent(".content").hide()
+	$(".ev_layer .triger").addClass("floating");
+})
+
+function openFull(){
+	$("div.layer.full").scroll(function(event){ 
+		layer_pos = $(this).scrollTop();
+		if(layer_pos > 0){
+			$(this).find("header").addClass("active")
+		} else {
+			$(this).find("header").removeClass("active")
+		}
+	});
+}
+openFull();
+
+	/*refreshCSS = () => { 
+		let links = document.getElementsByTagName('link'); 
+		for (let i = 0; i < links.length; i++) { 
+			if (links[i].getAttribute('rel') == 'stylesheet') { 
+				let href = links[i].getAttribute('href') 
+										.split('?')[0]; 
+				
+				let newHref = href + '?version='  
+							+ new Date().getMilliseconds(); 
+				
+				links[i].setAttribute('href', newHref).reload();
+			}
+		}
+	} */
+
+
+	$('.bnr_list').slick({
+		dots: true,
+		dotsClass: "bnr_dots",
+		infinite: true,
+		arrows: false
+	});
+
+	var xd = $(".panal input");
+
+	/* 약관에 모두 동의 */
+	$(".panal input").on('click',function(){
+		/*var chkAll = $(this).is(":checked");*/
+		var chkAll = $(this).prop('checked');
+		if(chkAll){
+			$(this).closest(".item").addClass("active")
+		}else{
+			$(this).closest(".item").removeClass("active")
+		}
+	})
+
+	/* cp 전체 체크 */
+	// var cp_chk_all = $(".panal input");
+	// cp_chk_all.each(function(){
+	// 	var idx = cp_chk_all.index($(this));
+	// 	$(this).on("click", function(){
+	// 		var cpChkAll = $(this).prop('checked');
+	// 		if(cpChkAll){
+	// 			$(this).parent().siblings().find("input").prop('checked', true)
+	// 		}else{
+	// 			$(this).parent().siblings().find("input").prop('checked', false)
+	// 		}
+	// 	})
+	// })
+
+	/* 셀렉트 아이콘 변경 */
+	$(".sectionTitle div.title select").on("focus",function(){
+		$(this).addClass("active")
+	})
+
+	$(".sectionTitle div.title select").on("blur change", function(){
+		$(this).removeClass("active");
+		$(this).blur();
+	})
+	
+	$(".sectionTitle div.title select").blur(function(){
+		$(this).removeClass("active");
+	})
+})
+</script>
+
+<script>
+
+</script>
+</body>
+</html>

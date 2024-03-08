@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>stock_new_2021</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<meta name="description" content="설명설명설명">
+
+	<meta property="og:type" content="website"> 
+	<meta property="og:title" content="타이틀타이틀">
+	<meta property="og:description" content="설명설명설명">
+	<meta property="og:image" content="../../images/common/stock_meta.png">
+	<meta property="og:url" content="https://www.www.www.www/">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="타이틀타이틀">
+	<meta name="twitter:description" content="설명설명설명">
+	<meta name="twitter:image" content="../../images/common/logo_stock.png">
+	<meta name="twitter:domain" content="https://www.www.www.www/">
+
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/stock_new.css">
+	<link rel="stylesheet" href="../../css/test.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico">
+<style>
+.layer .close button {border:0 none;}
+
+div.layer {display:none;}
+div.layer_dim {position:fixed; top:0; right:0; bottom:0; left:0; height:100vh; background-color:rgba(0,0,0,0.5);}
+
+
+
+/* 모달팝업 */
+div.layer.modal .layer_inner {position:fixed; top:50%; left:20px; right:20px; max-height:40vh; transform:translateY(-50%); background-color:#fff; border-radius:0.5em; box-shadow:0 1px 10px rgba(0,0,0,0.5); overflow-y:auto; 
+	animation-name:ani_modal; animation-duration:0.2s; animation-iteration-count:1;
+	transform:translateY(-50%);
+}
+@keyframes ani_modal {
+	0% {transform:translateY(-50%) scale(0.8); opacity:0;}
+	100% {transform:translateY(-50%) scale(1); opacity:1;}
+}
+
+div.layer.modal dl {padding:2.75em 1em 0; color:#111; text-align:center;}
+div.layer.modal dl dt {margin-bottom:0.5em; font-weight:bold; line-height:1.25em;}
+div.layer.modal dl dd {font-size:0.9375em; line-height:1.46666em;}
+div.modal_btn {display:flex; justify-content:space-between; align-items:center;; position:-webkit-sticky; position:sticky; left:0; bottom:0; width:100%; margin-top:2em; padding:0 12px;}
+div.modal_btn div {width:100%; padding:0 4px 16px;}
+div.modal_btn div button {width:100%; border-radius:0.375em; line-height:3em; font-weight:bold;}
+div.modal_btn div button.next {background-color:#ff6600; color:#fff;}
+div.modal_btn div button.close {background-color:#eee; color:#aaa;}
+
+
+
+
+</style>
+</head>
+<body>
+
+
+<div class="layer modal" style="display:block;">
+	<div class="layer_dim"></div>
+	<div class="layer_inner">
+		<dl>
+			<dt>스탁 서비스 가입해지</dt>
+			<dd>서비스를 해지하시겠습니까?</dd>
+		</dl>
+		<div class="modal_btn">
+			<div><button type="button" class="next"><span>확인</span></button></div>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../js/jquery-1.12.4.min.js"></script> -->
+
+<script src="../../js/temp.js"></script>
+<script>
+
+$(function(){
+
+	/* 딤 클릭시 팝업 닫기 */
+	$(".layer .layer_dim").on("click", function(){
+		$(this).parents('.layer').hide();
+	})
+
+
+})
+</script>
+</body>
+</html>

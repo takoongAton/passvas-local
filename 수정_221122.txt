@@ -1,0 +1,19 @@
+upluspass.css 수정
+/* 공통 (생상) */
+#section0 {background-color:#ee6fbb;}
+#section1 {background-color:#fff;}
+#section2 {background-color:#f7f7f7;}
+#section3 {background-color:#ee6fbb;}
+#section4 {background-color:#fff;}
+#section5 {background-color:#f7f7f7;}
+#section6 {background-color:#fff;}
+
+194줄 수정
+기존 : .con_group .txtGroup dl dt {font-size:30px; line-height:1.3em; }
+수정 : .con_group .txtGroup dl dt {font-size:27px; line-height:1.3em; }
+
+temp.js
+수정 : sectionsColor: ['#ee6fbb', '#fff', '#f7f7f7', '#ee6fbb', '#fff', '#fff', '#f7f7f7'],
+
+./images/index/ 폴더 내 이미지 수정,추가
+./images/screen/ 폴더 내 이미지 수정, 추가

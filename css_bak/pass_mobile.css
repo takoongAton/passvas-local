@@ -1,0 +1,121 @@
+@media screen and (max-width:769px) {
+
+body {}
+header {display:flex; justify-content:space-between; align-items:center; position:-webkit-sticky; position:sticky; top:0; left:0; width:100%; padding:0 20px; background-color:#fff; z-index: 2; box-shadow:0 0 5px rgba(0,0,0,0.3); height:52px;}
+header .logo {}
+header h1 img {width:102px;}
+header ul {display:flex;}
+header a {text-decoration:none; color:#222;}
+header a {font-size:12px;}
+.main {position:relative; padding:62px 53px 67px 0; text-align:right; }
+.main .bg {position:absolute; top:0; left:0; width:100%; height:100%;
+	background-color:#ff6060;
+	background-image: url('../images/temp/main_bg.png');
+	background-repeat: no-repeat;
+	background-position:68% center;
+	background-size: cover;
+	z-index:0;
+	opacity:0.5;
+}
+.main .logo {display:inline-block; position:relative; width:80px; z-index:1;}
+.main .main_txt {position:relative; margin-top:20px; z-index:1; text-shadow:0 0 5px rgba(255,255,255,0.5);}
+.main .main_txt p:first-of-type {font-size:24px; line-height:1.33333;}
+.main .main_txt p span {display:block; font-weight:300;}
+.main .main_txt p i {display:block;}
+.main .main_txt p + p {margin-top:14px; font-size:12px; line-height:1.66666;}
+
+
+dl.mainTxt {}
+dl.mainTxt dt {}
+dl.mainTxt dt span {}
+dl.mainTxt {}
+dl.mainTxt {}
+
+dl.subTxt {}
+dl.subTxt dt {font-size:25px; line-height:1.2em;}
+dl.subTxt dt span {font-weight:300;}
+dl.subTxt dt strong {font-weight:700;}
+dl.subTxt dd {margin-top:25px; font-size:12px; line-height:1.66666em;}
+dl.subTxt dd span {}
+dl.subTxt + div {margin-top:50px;}
+
+
+.section {text-align:center;}
+
+.passHomeTax {padding:0 0 90px 0;}
+.passHomeTax .imgWrap {position:relative; width:60.69444%; max-width:500px; min-width:240px; margin:0 auto; transform:translateY(-33px);}
+.passauth {padding:0 0 142px 0;}
+.passauth .imgWrap {position:relative; width:60.69444%; max-width:500px; min-width:240px; margin:0 auto; transform:translateY(-50px);}
+
+.passLicense {padding:0 0 142px 0;}
+.passLicense .imgWrap {position:relative; transform:translateY(-79px);}
+
+.stgpassauth {padding:0 0 50px 0;}
+.stgpassauth  .imgWrap {position:relative; width:60.69444%; max-width:500px; min-width:240px; margin:0 auto; transform:translateY(-78px);}
+
+.passQrcode {padding:0 0 50px 0;}
+.passQrcode .imgWrap {max-width:500px; min-width:240px; margin:0 auto;}
+.passQrcode dl.subTxt {margin-top:28px;}
+.passQrcode dl.subTxt dd {margin-top:31px;}
+
+.small_images {margin-top:-45px; font-size:0;}
+.small_images span {display:inline-block; margin:0 8px; border-radius:2px; box-shadow:0 -2px 5px rgba(0,0,0,0.15)}
+.small_images img {width:88px;}
+/*.passHomeTax {display:flex; align-items:center width:100%; height:100%;}
+.passHomeTax .box {display:flex; width:100%; justify-content:center; align-items:center; flex-direction:column;}
+.passHomeTax .box > div:first-of-type {}
+.passHomeTax .box > div:last-of-type {flex:1;}*/
+
+
+.customer_guide {margin-top:50px;}
+.customer_guide dt {font-size:13.5px;}
+.customer_guide dd {margin-top:16px;}
+.customer_guide dd::after {content:""; display:block; height:0; clear:both;}
+.customer_guide dd span {display:block;}
+.customer_guide dd span + span {margin-top:6px;}
+.customer_guide dd a {display:inline-flex; justify-content:center; align-items:center; width:50px; height:50px; margin:0 5px; background-color:#ffe5eb; vertical-align:top; text-align:center; text-decoration:none; border-radius:100%; overflow:hidden; color:#222;}
+.customer_guide dd a {}
+.customer_guide dd a:lasf-of-type {margin-right:0;}
+.customer_guide dd a:nth-child(3n + 1)::before {content:""; display:block; height:0; clear:both;}
+.customer_guide dd a span {font-size:6.5px; line-height:1.3846;}
+
+
+i {display:block;}
+
+.box {}
+.box .btn {}
+.box .btn button {width:132px; height:50px; background-color:#222; border-radius:4px; color:#fff; font-size:#fff;}
+.box .btn button span {position:relative; padding-right:10px;}
+.box .btn button span::before {content:""; display:block; position:absolute; top:50%; right:0; width:10px; height:10px; border-width:2px 2px 0 0; border-style:solid; border-color:#fff; transform-origin:100% 0; transform:rotate(45deg);}
+
+
+/*.footer_wrap {display:flex; flex-direction:column; width:100%; height:100%;}
+.footer_wrap .footer_info {display:flex; flex:1; width:100%; justify-content:center; align-items:center;}
+.footer_wrap .footer_info dl {}
+.footer_wrap .footer_info dl dt {font-size:62px;}
+.footer_wrap .footer_info dl dd {font-size:25px;}
+.footer_wrap .footer {display:flex; align-items:center; width:100%; min-height:209px; background-color:#222; color:#fff;}
+.footer_wrap .footer div.logo {width:275px; text-align:center;}
+.footer_wrap .footer div.logo + dl {flex:1;}
+.footer_wrap .footer dl + div {}
+.footer_wrap .footer div.share {}*/
+
+.footer_wrap .footer_info {padding:100px 0 75px; background-color:#f8f8f8;}
+.footer_wrap .footer_info dl {}
+.footer_wrap .footer_info dl dt {font-size:30px; font-weight:bold; line-height:1.33333;}
+.footer_wrap .footer_info dl dd {margin-top:20px; font-size:12px; line-height:1.66666;}
+.footer_wrap .footer_info dl + div {margin-top:30px; font-size:0;}
+.footer_wrap .footer_info dl + div button {width:148px;}
+.footer_wrap .footer_info dl + div button + button {display:none;}
+
+
+.footer {position:relative; padding:40px 30px; background-color:#222; color:#fff; text-align:left;}
+.footer a {color:#fff !important; text-decoration:none;}
+.footer div.logo img {width:72px;}
+.footer dl {margin-top:27px; font-size:9px;}
+.footer dl dd {margin-top:11px;}
+.footer dl + div {position:absolute; top:40px; right:30px; font-size:10px; line-height:20px;}
+.footer div.sns {margin-top:31px; text-align:center;}
+.footer div.sns button {width:32px; height:32px; margin:0 6px;}
+
+}
