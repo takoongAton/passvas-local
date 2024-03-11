@@ -897,7 +897,7 @@ button {
 .alert_chk_wrap {margin-top:32px;}
 .alert_chk_wrap label {display:block; position:relative; padding-left:28px;}
 .alert_chk_wrap label input {position:absolute; top:0; left:0; width:0; height:0; opacity:0;}
-.alert_chk_wrap label span.checkmark {position:absolute; top:0; left:0; width:24px; height:24px; border-radius:1px; background:#f7f7f7 url('../images/pass/checkbox_off.png') no-repeat left top / contain; overflow:hidden;}
+.alert_chk_wrap label span.checkmark {position:absolute; top:0; left:0; width:24px; height:24px; border-radius:1px; background:url('../images/pass/checkbox_off.png') no-repeat left top / contain; overflow:hidden;}
 .alert_chk_wrap label input:checked + span.checkmark {background-image:url('../images/pass/checkbox_on.png')}
 .alert_chk_wrap label p.txt {display:inline-block; font-size:18px; line-height:24px; font-weight:bold;}
 .alert_chk_wrap .txt_wrap {margin-top:12px;}
