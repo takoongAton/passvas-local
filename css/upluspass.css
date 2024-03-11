@@ -848,3 +848,111 @@ button {
 .privacy_ver .select_ver select {position:relative; height:30px; padding:0 1.75em 0 0.75em; background-color:transparent; border:1px solid #222; border-radius:2px; color:#222; font-size:0.8375em; font-family:'Noto Sans KR'; z-index:1;}
 .privacy_ver button {height:30px; margin-left:2px; padding:0 0.5em; background-color: #222; border-radius:2px; color:#fff; font-family:'Noto Sans KR';}
 .privacy_ver button span {display:block; font-size:0.875em;}
+
+
+/* 패스 해지 팝업 */
+.wrap_cancel {padding:44px 24px; font-family:"Noto Sans KR", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Apple SD Gothic Neo", Arial, sans-serif;}
+.wrap_cancel .lgup_logo {text-align:right;}
+.wrap_cancel .lgup_logo img {width:120px;}
+.wrap_cancel .pass_logo {margin-top:32px; padding-bottom:48px;}
+.wrap_cancel .pass_logo img {width:100px;}
+.wrap_cancel .pass_logo h1 {margin-top:8px; font-size:28px; line-height:1em;}
+
+.userinfo_input_wrap {}
+.userinfo_input_wrap .row_item {display:flex; align-items:center; white-space:nowrap; gap:10px;}
+.userinfo_input_wrap .row_item div.tit {white-space:nowrap; font-size:14px;}
+.userinfo_input_wrap .row_item div.tit strong {display:inline-block;}
+.userinfo_input_wrap .row_item div.tit span {display:inline-block; color:#E83E8C;}
+.userinfo_input_wrap .row_item div.ipt_set {flex:1; position:relative;}
+.userinfo_input_wrap .row_item div.ipt_set .ipt_input {}
+.userinfo_input_wrap .row_item div.ipt_set input {padding:0 12px; border:1px solid #ddd; border-radius:6px; font-size:18px; overflow:hidden;}
+.userinfo_input_wrap .row_item div.ipt_set input:disabled,
+.userinfo_input_wrap .row_item div.ipt_set input:read-only {background-color:#f7f7f7;}
+.userinfo_input_wrap .row_item div.ipt_set input::placeholder {color:#999; font-size:16px; letter-spacing:-0.05em;}
+/* .userinfo_input_wrap .row_item div.ipt_set input:focus {} */
+.userinfo_input_wrap .row_item div.ipt_set input.active {background-color:#ddd;}
+.userinfo_input_wrap .row_item div.ipt_set button {position:absolute; top:0; right:0; width:48px; height:48px;}
+.userinfo_input_wrap .row_item input[type="text"] {width:100%; height:48px; border:0 none;}
+.userinfo_input_wrap button.btn_del {width:48px; height:48px; background:url('../images/pass/ico_cancel.png') no-repeat center center / 24px 24px; color:transparent; font-size:12px;}
+.userinfo_input_wrap button.btn_del span {display:inline-block; width:24px; height:24px;}
+
+
+/* 성별 선택 */
+.gender_select {display:flex; gap:12px; width:100%; margin-top:8px;}
+.gender_select label {position:relative; width:100%;}
+.gender_select label input {position:absolute; top:0; left:0; width:0; height:0; opacity:0;}
+.gender_select label span.checkmark {display:flex; justify-content:center; align-items:center; width:100%; width:100%; height:48px; border:1px solid #ddd; border-radius:4px; font-size:14px; color:#999;}
+.gender_select label input:checked + span.checkmark {border-color:#E83E8C; color:#E83E8C;}
+/* 성별 선택 */
+
+/* 통신사 선택 */
+.telecom_select {display:flex; gap:12px; width:100%; margin-top:48px;}
+.telecom_select label {position:relative; width:100%;}
+.telecom_select label input {position:absolute; top:0; left:0; width:0; height:0; opacity:0;}
+.telecom_select label span.checkmark {display:flex; justify-content:center; align-items:center; width:100%; width:100%; height:48px; border:1px solid #ddd; border-radius:24px; color:#999; font-size:18px; font-weight:bold;}
+.telecom_select label input:checked + span.checkmark {background-color:#E83E8C; border-color:#E83E8C; color:#fff;}
+/* // 통신사 선택 */
+
+/* 약관동의 체크 */
+.alert_chk_wrap {margin-top:32px;}
+.alert_chk_wrap label {display:block; position:relative; padding-left:28px;}
+.alert_chk_wrap label input {position:absolute; top:0; left:0; width:0; height:0; opacity:0;}
+.alert_chk_wrap label span.checkmark {position:absolute; top:0; left:0; width:24px; height:24px; border-radius:1px; background:#f7f7f7 url('../images/pass/checkbox_off.png') no-repeat left top / contain; overflow:hidden;}
+.alert_chk_wrap label input:checked + span.checkmark {background-image:url('../images/pass/checkbox_on.png')}
+.alert_chk_wrap label p.txt {display:inline-block; font-size:18px; line-height:24px; font-weight:bold;}
+.alert_chk_wrap .txt_wrap {margin-top:12px;}
+.alert_chk_wrap .txt_wrap p {position:relative; padding-left:0.75em; color:#000; font-size:14px; line-height:24px;}
+.alert_chk_wrap .txt_wrap p span {position:absolute; top:0; left:0; color:inherit; font-size:inherit; line-height:inherit;}
+/* // 약관동의 체크 */
+
+/* 인증번호 입력 확인 */
+.codeNumber_input_wrap {margin-top:32px;}
+.codeNumber_input_wrap .row_item {display:flex; align-items:center; white-space:nowrap; gap:10px;}
+.codeNumber_input_wrap .row_item + .row_item {margin-top:16px;}
+.codeNumber_input_wrap .row_item div.tit {white-space:nowrap; width:68px; font-size:14px; letter-spacing:-0.05em;}
+.codeNumber_input_wrap .row_item div.tit strong {display:inline-block;}
+.codeNumber_input_wrap .row_item div.tit span {display:inline-block; color:#E83E8C;}
+.codeNumber_input_wrap .row_item div.ipt_set {flex:1; position:relative;}
+.codeNumber_input_wrap .row_item div.ipt_set .ipt_input {}
+.codeNumber_input_wrap .row_item div.ipt_set input {padding:0 12px; border:1px solid #ddd; border-radius:6px; font-size:18px; overflow:hidden;}
+.codeNumber_input_wrap .row_item div.ipt_set input.active {background-color:#ddd;}
+
+.codeNumber_input_wrap .row_item div.ipt_set input:disabled,
+.codeNumber_input_wrap .row_item div.ipt_set input:read-only {background-color:#f7f7f7;}
+.codeNumber_input_wrap .row_item div.ipt_set input::placeholder {color:#999; font-size:16px; letter-spacing:-0.05em;}
+
+.codeNumber_input_wrap .row_item div.ipt_set button {position:absolute; top:0; right:0; width:48px; height:48px;}
+.codeNumber_input_wrap .row_item input[type="text"] {width:100%; height:48px; border:0 none;}
+.codeNumber_input_wrap .row_item .btn_set {}
+.codeNumber_input_wrap .row_item .btn_set button {width:80px; height:48px; border:1px solid #E83E8C; border-radius:6px; overflow:hidden;}
+.codeNumber_input_wrap .row_item .btn_set button span {color:#E83E8C; font-size:14px; font-weight:400;}
+
+.codeNumber_input_wrap .row_item .btn_set button:disabled {border-color:#ddd;}
+.codeNumber_input_wrap .row_item .btn_set button:disabled span {color:#999}
+
+.codeNumber_input_wrap button.btn_del {width:48px; height:48px; background:url('../images/pass/ico_cancel.png') no-repeat center center / 24px 24px; color:transparent; font-size:12px;}
+.codeNumber_input_wrap button.btn_del span {display:inline-block; width:24px; height:24px;}
+/* 인증번호 입력 확인 */
+
+/* 인증번호 확인 텍스트 */
+.codeNumber_input_wrap {}
+.codeNumber_input_wrap .txt_wrap {padding:0 0 0 80px;}
+.codeNumber_input_wrap .txt_wrap p {margin-top:4px; color:#000; font-size:14px; line-height:20px;}
+.codeNumber_input_wrap .txt_wrap p span {color:#E83E8C;}
+.codeNumber_input_wrap button.btn_send:disabled {background-color:#f7f7f7; color:#999;}
+.codeNumber_input_wrap button.btn_send:disabled span {color:#999;}
+.codeNumber_input_wrap button.btn_send {width:100%; height:48px; margin-top:48px; background-color:#E83E8C; border-radius:24px; color:#fff;}
+.codeNumber_input_wrap button.btn_send span {color:#fff; font-size:18px; font-weight:bold;}
+/* // 인증번호 확인 텍스트 */
+
+
+/* 임시 레이어 팝업 */
+/* .dim {position:fixed; top:0; right:0; bottom:0; left:0; background-color:rgba(0,0,0,0.7); z-index:2;} */
+.layer.alert {position:fixed; top:50%; left:0; width:100%; padding:0 24px; transform:translateY(-50%); z-index:10;}
+.layer.alert .layer_inner {width:100%; min-width:300px; max-width:488px; margin:0 auto; padding:48px 32px 32px; background-color:#fff; border-radius:16px; box-shadow:0 2px 6px rgba(0,0,0,0.16);}
+.layer.alert .layer_inner div.txt {font-size:18px; line-height:24px; text-align:center;}
+.layer.alert .layer_inner div.btn_group {margin-top:31px;}
+.layer.alert .layer_inner button {width:100%; height:48px; background-color:#E83E8C; border-radius:24px; color:#fff;;}
+.layer.alert .layer_inner button span {display:inline-block; color:#fff; font-size:18px; line-height:1; font-weight:bold;}
+/* // 임시 레이어 팝업 */
+/* // 패스 해지 팝업 */
