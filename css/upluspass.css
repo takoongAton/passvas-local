@@ -939,9 +939,9 @@ button {
 .codeNumber_input_wrap .txt_wrap {padding:0 0 0 80px;}
 .codeNumber_input_wrap .txt_wrap p {margin-top:4px; color:#000; font-size:14px; line-height:20px;}
 .codeNumber_input_wrap .txt_wrap p span {color:#E83E8C;}
-.codeNumber_input_wrap button.btn_send:disabled {background-color:#f7f7f7; color:#999;}
+.codeNumber_input_wrap button.btn_send:disabled {border:1px solid #ddd; background-color:#fff; color:#999;}
 .codeNumber_input_wrap button.btn_send:disabled span {color:#999;}
-.codeNumber_input_wrap button.btn_send {width:100%; height:48px; margin-top:48px; background-color:#E83E8C; border-radius:24px; color:#fff;}
+.codeNumber_input_wrap button.btn_send {width:100%; height:48px; margin-top:48px; background-color:#E83E8C; border-color:transparent; border-radius:24px; color:#fff;}
 .codeNumber_input_wrap button.btn_send span {color:#fff; font-size:18px; font-weight:bold;}
 /* // 인증번호 확인 텍스트 */
 
