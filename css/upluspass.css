@@ -856,70 +856,111 @@ button {
 .wrap_cancel .lgup_logo img {width:120px;}
 .wrap_cancel .pass_logo {margin-top:32px; padding-bottom:48px;}
 .wrap_cancel .pass_logo img {width:100px;}
-.wrap_cancel .pass_logo h1 {margin-top:8px; font-size:28px; line-height:1em;}
+.wrap_cancel .pass_logo h1 {margin-top:8px; font-size:28px; line-height:41px;}
+.wrap_cancel .pass_logo p.txt {margin-top:3px; font-size:14px; line-height:20px;;}
 
 .userinfo_input_wrap {}
-.userinfo_input_wrap .row_item {display:flex; align-items:center; white-space:nowrap; gap:10px;}
-.userinfo_input_wrap .row_item div.tit {white-space:nowrap; font-size:14px;}
-.userinfo_input_wrap .row_item div.tit strong {display:inline-block;}
+.userinfo_input_wrap .row_item {}
+.userinfo_input_wrap .row_item + .row_item {margin-top:8px;}
+.userinfo_input_wrap .row_item div.tit {padding-bottom:8px; white-space:nowrap; font-size:14px;}
+.userinfo_input_wrap .row_item div.tit strong {display:inline-block; line-height:20px;}
 .userinfo_input_wrap .row_item div.tit span {display:inline-block; color:#E83E8C;}
+.userinfo_input_wrap .row_item div.item_inner {display:flex; align-items:center; white-space:nowrap; gap:10px; position:relative;}
+.userinfo_input_wrap .row_item div.item_inner::before {content:""; display:block; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:6px; height:1px; background-color:#707070;}
 .userinfo_input_wrap .row_item div.ipt_set {flex:1; position:relative;}
 .userinfo_input_wrap .row_item div.ipt_set .ipt_input {}
 .userinfo_input_wrap .row_item div.ipt_set input {padding:0 12px; border:1px solid #ddd; border-radius:6px; font-size:18px; overflow:hidden;}
 .userinfo_input_wrap .row_item div.ipt_set input:disabled,
 .userinfo_input_wrap .row_item div.ipt_set input:read-only {background-color:#f7f7f7;}
-.userinfo_input_wrap .row_item div.ipt_set input::placeholder {color:#999; font-size:16px; letter-spacing:-0.05em;}
+.userinfo_input_wrap .row_item div.ipt_set input::placeholder {position:relative; top:-2px; color:#999; font-size:12px; line-height:46px; letter-spacing:-0.05em;}
 /* .userinfo_input_wrap .row_item div.ipt_set input:focus {} */
-.userinfo_input_wrap .row_item div.ipt_set input.active {background-color:#ddd;}
+.userinfo_input_wrap .row_item div.ipt_set input.active {background-color:#f7f7f7;}
 .userinfo_input_wrap .row_item div.ipt_set button {position:absolute; top:0; right:0; width:48px; height:48px;}
 .userinfo_input_wrap .row_item input[type="text"] {width:100%; height:48px; border:0 none;}
 .userinfo_input_wrap button.btn_del {width:48px; height:48px; background:url('../images/pass/ico_cancel.png') no-repeat center center / 24px 24px; color:transparent; font-size:12px;}
 .userinfo_input_wrap button.btn_del span {display:inline-block; width:24px; height:24px;}
 
 
-/* 성별 선택 */
-.gender_select {display:flex; gap:12px; width:100%; margin-top:8px;}
-.gender_select label {position:relative; width:100%;}
-.gender_select label input {position:absolute; top:0; left:0; width:0; height:0; opacity:0;}
-.gender_select label span.checkmark {display:flex; justify-content:center; align-items:center; width:100%; width:100%; height:48px; border:1px solid #ddd; border-radius:4px; font-size:14px; color:#999;}
-.gender_select label input:checked + span.checkmark {border-color:#E83E8C; color:#E83E8C;}
-/* 성별 선택 */
 
 /* 통신사 선택 */
-.telecom_select {display:flex; gap:12px; width:100%; margin-top:48px;}
+.telecom_select {width:100%; margin-top:8px;}
+.telecom_select div.tit {white-space:nowrap; width:68px; padding-bottom:8px; font-size:14px; letter-spacing:-0.05em;}
+.telecom_select div.tit strong {display:inline-block; line-height:20px;}
+.telecom_select div.tit span {display:inline-block; color:#E83E8C;}
+.telecom_select div.item_inner {display:flex; gap:12px; width:100%; }
 .telecom_select label {position:relative; width:100%;}
 .telecom_select label input {position:absolute; top:0; left:0; width:0; height:0; opacity:0;}
 .telecom_select label span.checkmark {display:flex; justify-content:center; align-items:center; width:100%; width:100%; height:48px; border:1px solid #ddd; border-radius:24px; color:#999; font-size:18px; font-weight:bold;}
 .telecom_select label input:checked + span.checkmark {background-color:#E83E8C; border-color:#E83E8C; color:#fff;}
 /* // 통신사 선택 */
 
-/* 약관동의 체크 */
-.alert_chk_wrap {margin-top:32px;}
-.alert_chk_wrap label {display:block; position:relative; padding-left:28px;}
+/* 주민등록번호 입력 */
+.identity_number_wrap {display:flex; align-items:center; width:100%;}
+.identity_number_wrap div.id_num_item {flex:1; width:100%;}
+.identity_number_wrap span.input_dash {position:relative; width:32px;}
+.identity_number_wrap span.input_dash::before {content:""; display:block; position:absolute; top:50%; left:50%; width:6px; height:1px; background-color:#777; transform:translate(-50%,-50%);}
+.identity_number_wrap div.id_num_item div.id_num_end {display:flex; align-items:center; width:100%;}
+.identity_number_wrap div.id_num_item div.id_num_end .ipt_input input {width:36px;}
+.identity_number_wrap div.id_num_item div.id_num_end .img_bg {height:48px; flex:1; background:url('../images/pass/hide_num.png') no-repeat 8px center / 90px auto;}
+@media only screen and (max-width:359px) {
+	.identity_number_wrap div.id_num_item div.id_num_end .img_bg {background-size:70px auto;;}
+}
+/* // 주민등록번호 입력 */
+
+/* 약관 전체 동의 */
+.agree_wrap {margin-top:28px;}
+.agree_wrap div {display:flex; justify-content:space-between; align-items:flex-start; gap:10px; width:100%; padding:10px; border:1px solid #ddd; border-radius:6px; background-color:#f7f7f7; overflow:hidden;}
+.agree_wrap div label {flex:1;}
+.agree_wrap div label span.txt {font-weight:bold; font-size:18px; font-weight:bold;}
+.agree_wrap div button.btn_toggle {width:44px; font-size:14px; line-height:24px; color:#999;}
+.agree_wrap div button.btn_toggle span {display:block; line-height:24px; white-space:nowrap;}
+
+.agree_wrap ul {margin-top:10px; padding:0 11px;}
+.agree_wrap ul li {display:flex; justify-content:space-between; align-items:flex-start; gap:10px; width:100%; margin-bottom:10px;}
+.agree_wrap ul li button {width:auto; white-space:nowrap; text-decoration:underline;}
+.agree_wrap ul li button span {display:block; color:#999; font-size:14px; line-height:24px; text-decoration:underline;}
+
+.agree_wrap input[type="text"] {border:1px solid #ddd;}
+.agree_wrap label {display:flex; align-items:flex-start; gap:8px; position:relative; font-size:16px; cursor:pointer;}
+.agree_wrap label input[type="checkbox"] {position:absolute; width:0; height:0; border:0 none; opacity:0;}
+.agree_wrap label span.txt {display:block; font-size:14px; line-height:24px;}
+.agree_wrap span.checkmark {display:inline-block; width:24px; min-width:24px; height:24px; background-size:cover;}
+.agree_wrap li span.checkmark {background-image:url('../images/pass/checkbox_s_off.png');}
+.agree_wrap li input[type="checkbox"]:checked + span.checkmark {background-image:url('../images/pass/checkbox_s_on.png');}
+.agree_wrap div span.checkmark {background-image:url('../images/pass/checkbox_off.png');}
+.agree_wrap div input[type="checkbox"]:checked + span.checkmark {background-image:url('../images/pass/checkbox_on.png');}
+/* // 약관 전체 동의 */
+
+/* 유의사항 동의 */
+.alert_chk_wrap {margin-top:8px;}
+.alert_chk_wrap label {display:block; position:relative; padding:11px 11px 14px 43px; border:1px solid #ddd; border-radius:6px; background-color:#f7f7f7; overflow:hidden;}
 .alert_chk_wrap label input {position:absolute; top:0; left:0; width:0; height:0; opacity:0;}
-.alert_chk_wrap label span.checkmark {position:absolute; top:0; left:0; width:24px; height:24px; border-radius:1px; background:url('../images/pass/checkbox_off.png') no-repeat left top / contain; overflow:hidden;}
+.alert_chk_wrap label span.checkmark {position:absolute; top:11px; left:11px; width:24px; height:24px; border-radius:1px; background:url('../images/pass/checkbox_off.png') no-repeat left top / contain; overflow:hidden;}
 .alert_chk_wrap label input:checked + span.checkmark {background-image:url('../images/pass/checkbox_on.png')}
 .alert_chk_wrap label p.txt {display:inline-block; font-size:18px; line-height:24px; font-weight:bold;}
-.alert_chk_wrap .txt_wrap {margin-top:12px;}
+.alert_chk_wrap .txt_wrap {margin-top:8px;}
+.alert_chk_wrap .txt_wrap strong {display:block; padding-bottom:8px; font-size:14px; line-height:20px;}
 .alert_chk_wrap .txt_wrap p {position:relative; padding-left:0.75em; color:#000; font-size:14px; line-height:24px;}
 .alert_chk_wrap .txt_wrap p span {position:absolute; top:0; left:0; color:inherit; font-size:inherit; line-height:inherit;}
-/* // 약관동의 체크 */
+.alert_chk_wrap .txt_wrap p em {text-decoration:underline;}
+/* 유의사항 동의 */
 
 /* 인증번호 입력 확인 */
 .codeNumber_input_wrap {margin-top:32px;}
-.codeNumber_input_wrap .row_item {display:flex; align-items:center; white-space:nowrap; gap:10px;}
-.codeNumber_input_wrap .row_item + .row_item {margin-top:16px;}
-.codeNumber_input_wrap .row_item div.tit {white-space:nowrap; width:68px; font-size:14px; letter-spacing:-0.05em;}
-.codeNumber_input_wrap .row_item div.tit strong {display:inline-block;}
+.codeNumber_input_wrap .row_item {}
+.codeNumber_input_wrap .row_item + .row_item {margin-top:8px;}
+.codeNumber_input_wrap .row_item div.tit {white-space:nowrap; width:68px; padding-bottom:8px; font-size:14px; letter-spacing:-0.05em;}
+.codeNumber_input_wrap .row_item div.tit strong {display:inline-block; line-height:20px;}
 .codeNumber_input_wrap .row_item div.tit span {display:inline-block; color:#E83E8C;}
+.codeNumber_input_wrap .row_item div.item_inner {display:flex; align-items:center; white-space:nowrap; gap:10px; position:relative;}
 .codeNumber_input_wrap .row_item div.ipt_set {flex:1; position:relative;}
 .codeNumber_input_wrap .row_item div.ipt_set .ipt_input {}
 .codeNumber_input_wrap .row_item div.ipt_set input {padding:0 12px; border:1px solid #ddd; border-radius:6px; font-size:18px; overflow:hidden;}
-.codeNumber_input_wrap .row_item div.ipt_set input.active {background-color:#ddd;}
+.codeNumber_input_wrap .row_item div.ipt_set input.active {background-color:#f7f7f7;}
 
 .codeNumber_input_wrap .row_item div.ipt_set input:disabled,
 .codeNumber_input_wrap .row_item div.ipt_set input:read-only {background-color:#f7f7f7;}
-.codeNumber_input_wrap .row_item div.ipt_set input::placeholder {color:#999; font-size:16px; letter-spacing:-0.05em;}
+.codeNumber_input_wrap .row_item div.ipt_set input::placeholder {position:relative; top:-2px; color:#999; font-size:12px; line-height:46px; letter-spacing:-0.05em;}
 
 .codeNumber_input_wrap .row_item div.ipt_set button {position:absolute; top:0; right:0; width:48px; height:48px;}
 .codeNumber_input_wrap .row_item input[type="text"] {width:100%; height:48px; border:0 none;}
@@ -936,7 +977,7 @@ button {
 
 /* 인증번호 확인 텍스트 */
 .codeNumber_input_wrap {}
-.codeNumber_input_wrap .txt_wrap {padding:0 0 0 80px;}
+.codeNumber_input_wrap .txt_wrap {}
 .codeNumber_input_wrap .txt_wrap p {margin-top:4px; color:#000; font-size:14px; line-height:20px;}
 .codeNumber_input_wrap .txt_wrap p span {color:#E83E8C;}
 .codeNumber_input_wrap button.btn_send:disabled {border:1px solid #ddd; background-color:#fff; color:#999;}

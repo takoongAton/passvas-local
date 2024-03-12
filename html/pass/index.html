@@ -29,7 +29,8 @@
 		<div class="lgup_logo"><img src="../../images/pass/img_ci.png" alt="LG U+"></div>
 		<div class="pass_logo">
 			<div><img src="../../images/pass/img_pass_bi.png" alt="PASS"></div>
-			<h1>본인확인</h1>
+			<h1>PASS by U+ 서비스 탈퇴</h1>
+			<p class="txt">탈퇴하려는 본인명의의 휴대폰 번호로 인증해주세요.</p>
 		</div>
 
 		<div class="userinfo_input_wrap">
@@ -38,64 +39,127 @@
 					<strong>이름</strong>
 					<span>*</span>
 				</div>
-				<div class="ipt_set">
-					<div class="ipt_input"><input type="text" placeholder="이름"></div>
-					<button type="button" class="btn_del" style="display:none;"><span>삭제</span></button>
+				<div class="item_inner">
+					<div class="ipt_set">
+						<div class="ipt_input"><input type="text" placeholder="이름"></div>
+						<button type="button" class="btn_del" style="display:none;"><span>삭제</span></button>
+					</div>
 				</div>
 			</div>
 			<!-- // row_item -->
 
-			<div class="row_item" style="margin-top:32px;;">
+			<div class="row_item">
 				<div class="tit">
-					<strong>생년월일/성별</strong>
+					<strong>주민등록번호</strong>
 					<span>*</span>
 				</div>
-				<div class="ipt_set">
-					<div class="ipt_input"><input type="text" placeholder="생년월일 6자리 (예 990101)"></div>
-					<button type="button" class="btn_del" style="display:none;"><span>삭제</span></button>
+
+				<div class="identity_number_wrap">
+					<div class="id_num_item">
+						<div class="ipt_set">
+							<div class="ipt_input"><input type="text" maxlength="6" placeholder="주민등록번호 앞자리"></div>
+							<button type="button" class="btn_del" style="display:none;"><span>삭제</span></button>
+						</div>
+					</div>
+					<span class="input_dash"></span>
+					<div class="id_num_item">
+						<div class="ipt_set">
+							<div class="id_num_end">
+								<div class="ipt_input"><input type="text" maxlength="1" placeholder=""></div>
+								<div class="img_bg"></div>
+							</div>
+						</div>
+					</div>
 				</div>
+				<!-- // identity_number_wrap -->
 			</div>
 			<!-- // row_item -->
-
-			<div class="gender_select">
-				<label>
-					<input type="radio" name="name01" />
-					<span class="checkmark">남자</span>
-				</label>
-				<label>
-					<input type="radio" name="name01" />
-					<span class="checkmark">여자</span>
-				</label>
-			</div>
-			<!-- // gender_select -->
 
 
 			<div class="telecom_select">
-				<label>
-					<input type="radio" name="telecom01" />
-					<span class="checkmark">LG U+</span>
-				</label>
-				<label>
-					<input type="radio" name="telecom01" />
-					<span class="checkmark">U+ 알뜰폰</span>
-				</label>
+				<div class="tit">
+					<strong>통신사</strong>
+					<span>*</span>
+				</div>
+				<div class="item_inner">
+					<label>
+						<input type="radio" name="telecom01" />
+						<span class="checkmark">LG U+</span>
+					</label>
+					<label>
+						<input type="radio" name="telecom01" />
+						<span class="checkmark">U+ 알뜰폰</span>
+					</label>
+				</div>
 			</div>
 			<!-- // telecom_select -->
 
 		</div>
 		<!-- // userinfo_input_wrap -->
 
+		<div class="agree_wrap">
+			<div>
+				<label>
+					<input type="checkbox" class="agree all">
+					<span class="checkmark"></span>
+					<span class="txt">본인확인 서비스 이용약관 필수 동의</span>
+				</label>
+				<button type="button" class="btn_toggle"><span>펼치기</span></button>
+			</div>
+			<ul style="display:none;">
+				<li>
+					<label>
+						<input type="checkbox" class="agree item" required />
+						<span class="checkmark"></span>
+						<span class="txt">개인정보 수집/이용 동의 (필수)</span>
+					</label>
+					<button type="button" onclick="javascript:openPopup_login('https://safe.ok-name.co.kr/eterms/agreement001.jsp', 'privacy', '500', '450');"><span>보기</span></button>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="agree item" required />
+						<span class="checkmark"></span>
+						<span class="txt">고유식별 정보처리 동의 (필수)</span>
+					</label>
+					<button type="button" onclick="javascript:openPopup_login('https://safe.ok-name.co.kr/eterms/agreement002.jsp', 'privacy', '500', '450');"><span>보기</span></button>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="agree item" required />
+						<span class="checkmark"></span>
+						<span class="txt">서비스 이용약관 동의 (필수)</span>
+					</label>
+					<button type="button" onclick="javascript:openPopup_login('https://safe.ok-name.co.kr/eterms/agreement003.jsp', 'privacy', '500', '450');"><span>보기</span></button>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="agree item" required />
+						<span class="checkmark"></span>
+						<span class="txt">통신사 이용약관 동의 (필수)</span>
+					</label>
+					<button type="button" onclick="javascript:openPopup_login('https://safe.ok-name.co.kr/eterms/agreement004.jsp', 'privacy', '500', '450');"><span>보기</span></button>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="agree item" required />
+						<span class="checkmark"></span>
+						<span class="txt">개인정보 제3자 제공 동의 (알뜰폰) (필수)</span>
+					</label>
+					<button type="button" onclick="javascript:openPopup_login('https://safe.ok-name.co.kr/eterms/agreement005.jsp', 'privacy', '500', '450');"><span>보기</span></button>
+				</li>
+			</ul>
+		</div>
 
 		<div class="alert_chk_wrap">
 			<label>
 				<input type="checkbox">
 				<span class="checkmark"></span>
-				<p class="txt">유의 및 안내 사항을 모두 확인하였으며, PASS by U+ 서비스 탈퇴 시 유의사항에 동의합니다.</p>
+				<p class="txt">PASS by U+ 탈퇴 시 유의사항을 확인하였으며, 모두 동의합니다.</p>
 			</label>
 			<div class="txt_wrap">
-				<p><span>*</span>서비스 탈퇴 신청 전 유의사항을 먼저 말해주세요.</p>
+				<strong>*유의사항</strong>
 				<p><span>-</span>서비스 탈퇴 즉시 PASS by U+회원약관 및 개인정보 제공, 활용에 관한 약관동의가 모두 철회되며 현재 사용 중인 서비스는 모두 해지처리됩니다.</p>
-				<p><span>-</span>또한, 적립된 포인트와 응모 이벤트 이력 등 서비스 이용 이력 모두 소멸됩니다.</p>
+				<p><span>-</span><em>고객님 명의로 적립된 포인트(PASS머니 등)와 이벤트 응모이력 등 모든 서비스 이용내역도 모두 소멸되며, 복구 불가능 합니다.</em></p>
 			</div>
 		</div>
 		<!-- // alert_chk_wrap -->
@@ -106,11 +170,14 @@
 				<div class="tit">
 					<strong>휴대폰 번호</strong>
 				</div>
-				<div class="ipt_set">
-					<div class="ipt_input"><input type="text" placeholder="숫자만 입력"></div>
-				</div>
-				<div class="btn_set">
-					<button type="button" class="btn_ddd" disabled><span>인증요청</span></button>
+				<div class="item_inner">
+					<div class="ipt_set">
+						<div class="ipt_input"><input type="text" placeholder="숫자만 입력"></div>
+						<button type="button" class="btn_del" style="display:none;"><span>삭제</span></button>
+					</div>
+					<div class="btn_set">
+						<button type="button" class="btn_ddd" disabled><span>인증요청</span></button>
+					</div>
 				</div>
 			</div>
 			<!-- // row_item -->
@@ -119,12 +186,14 @@
 				<div class="tit">
 					<strong>인증번호</strong>
 				</div>
-				<div class="ipt_set">
-					<div class="ipt_input"><input type="text" placeholder="인증번호"></div>
-					<!-- <button type="button" class="btn_del"><span>삭제</span></button> -->
-				</div>
-				<div class="btn_set">
-					<button type="button" class="btn_ddd" disabled><span>시간연장</span></button>
+				<div class="item_inner">
+					<div class="ipt_set">
+						<div class="ipt_input"><input type="text" placeholder="인증번호"></div>
+						<button type="button" class="btn_del" style="display:none;"><span>삭제</span></button>
+					</div>
+					<div class="btn_set">
+						<button type="button" class="btn_ddd" disabled><span>시간연장</span></button>
+					</div>
 				</div>
 			</div>
 			<!-- // row_item -->
@@ -192,6 +261,7 @@ if(inputs) {
 				if(item.closest(".userinfo_input_wrap")) {
 					item.closest(".ipt_set").querySelector("button.btn_del").style.display = "block";
 				} else if(item.closest(".codeNumber_input_wrap")) {
+					item.closest(".ipt_set").querySelector("button.btn_del").style.display = "block";
 					item.closest(".row_item").querySelector(".btn_ddd").removeAttribute("disabled");
 				}
 				
@@ -201,6 +271,7 @@ if(inputs) {
 				if(item.closest(".userinfo_input_wrap")) {
 					item.closest(".ipt_set").querySelector("button.btn_del").style.display = "none";
 				} else if(item.closest(".codeNumber_input_wrap")) {
+					item.closest(".ipt_set").querySelector("button.btn_del").style.display = "block";
 					item.closest(".row_item").querySelector(".btn_ddd").setAttribute("disabled", "disabled");
 				}
 			}
@@ -228,6 +299,38 @@ layerBtns.forEach(function(item){
 		document.querySelector("div.dim").style.display = "none";
 	})
 })
+
+
+
+/* 약관 목록 열고 닫기 */
+let btnToggle = document.querySelector("button.btn_toggle");
+btnToggle.addEventListener("click", function(e){
+	if (document.querySelector(".agree_wrap ul").style.display === "none") {
+		document.querySelector(".agree_wrap ul").style.display = "block";
+		btnToggle.querySelector("span").innerText = "접기";
+	} else {
+		document.querySelector(".agree_wrap ul").style.display = "none";
+		btnToggle.querySelector("span").innerText = "펼치기";
+	}
+})
+/* // 약관 목록 열고 닫기 */
+
+
+/* index.html 에 있는거 가져온 팝업 띄우기 */
+function openPopup_login(url, popupName, _width, _height) {
+  if(_width == undefined){
+    _width = '600';
+  }
+  if(_height == undefined){
+    _height = '780';
+  }
+  // 팝업을 가운데 위치시키기 위해 아래와 같이 값 구하기
+  var _left = Math.ceil(( window.screen.width - _width )/2);
+  var _top = Math.ceil(( window.screen.height - _height )/2);
+
+  window.open(url, popupName, "resizable=no, width=" + _width + ", height=" + _height + ", left=" + _left + ", top=" + _top);
+}
+/* index.html 에 있는거 가져온 팝업 띄우기 */
 </script>
 
 </body>
